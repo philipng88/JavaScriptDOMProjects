@@ -1,0 +1,16 @@
+.navbar-toggler {
+  outline: none !important;
+  .toggler-icon {
+    font-size: 2.5rem;
+    color: $mainPink;
+  }
+}
+
+.nav-link {
+  color: $mainPink;
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    color: $mainBlack;
+  }
+}

@@ -1,0 +1,70 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.images {
+  flex: 0 0 80%;
+  min-height: 70vh;
+  background: url('img/bcg-0.jpeg') center/cover no-repeat;
+  box-shadow: 5px 10px black;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  position: relative;
+}
+
+.btn {
+  display: inline-block;
+  background: white;
+  color: black;
+  border: 3px solid green;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 20%;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  -ms-border-radius: 20%;
+  -o-border-radius: 20%;
+  box-shadow: 2px 5px black;
+  outline: none;
+  cursor: pointer;
+}
+
+.prevBtn,
+.nextBtn {
+  position: absolute;
+  top: 50%;
+}
+
+.prevBtn {
+  left: 0;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.nextBtn {
+  right: 0;
+  transform: translate(50%, -50%);
+  -webkit-transform: translate(50%, -50%);
+  -moz-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  -o-transform: translate(50%, -50%);
+}
+
+.btn:active {
+  background: gray;
+  box-shadow: 1px 1px gray;
+}
+
+.btn:hover {
+  background: green;
+  color: white;
+}

@@ -1,0 +1,24 @@
+@import 'variables';
+@import 'about';
+@import 'banner';
+@import 'cart';
+@import 'info-icons';
+@import 'lightbox';
+@import 'nav-links';
+@import 'store-items';
+@import 'scroll-top-btn';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Kaushan Script', cursive;
+  background: $mainWhite;
+  color: $mainBlack;
+}
+
+.search-box {
+  background: $mainPink;
+  color: $mainBlack;
+}

@@ -1,0 +1,52 @@
+* 
+  margin 0
+  padding 0
+  box-sizing border-box
+
+.navbar 
+  &__header
+    background #545454
+    display flex
+    justify-content space-between
+    padding 0.5rem 1rem
+    border-bottom 0.3rem solid #6baa75
+    ^[0]__btn
+      align-self center
+      border 5px solid #6baa75
+      cursor pointer
+      .bar1, .bar2, .bar3
+        width 30px
+        height 5px
+        margin .5rem
+        background #6baa75
+        transition all 1s ease
+    ^[0]__btn.change .bar1
+      transform rotate(-45deg) translate(-10px, 10px)
+    ^[0]__btn.change .bar2
+      opacity 0
+    ^[0]__btn.change .bar3
+      transform rotate(45deg) translate(-7px, -8px)
+  &__links
+    list-style-type none
+    transition all 1s ease
+    height 0
+    overflow hidden
+    ^[0]__single-link
+      display block
+      background #69747c
+      padding 1rem
+      font-size 1.5rem
+      text-decoration none
+      text-transform capitalize
+      color #6baa75
+      transition all .5s ease
+      cursor pointer
+      &:hover 
+        padding-left 1.5rem
+        background #545454
+  &__links&__collapse
+    height 240px
+
+header 
+  min-height calc(100vh - 91.8px)
+  background url('img/header-bcg.jpeg') center/cover no-repeat

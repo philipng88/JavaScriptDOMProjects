@@ -1,0 +1,12 @@
+body {
+  background: #95b8d1;
+}
+
+.column-wrapper {
+  height: 100vh;
+  align-items: center;
+}
+
+input {
+  margin-bottom: 0.75rem;
+}

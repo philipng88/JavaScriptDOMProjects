@@ -1,0 +1,59 @@
+.displayItems {
+  @include container;
+  background: #b6c2d9;
+
+  &-action {
+    @include action;
+  }
+
+  &-title {
+    @include title;
+    color: #4d7ea8;
+    margin-bottom: 0.25rem;
+  }
+
+  .grocery-list {
+    .grocery-item {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      align-items: center;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      transition: all 1s ease-in-out;
+      margin: 0.5rem 0;
+      &:hover {
+        background: #828489;
+      }
+      &__title {
+        text-align: left;
+        margin-left: 0.5rem;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        color: #272932;
+      }
+      &__link {
+        color: red;
+        transition: all 1s linear;
+        cursor: auto;
+        #delete-icon {
+          cursor: pointer;
+        }
+      }
+    }
+    .grocery-item:hover .grocery-item__link {
+      transform: scale(2);
+    }
+  }
+
+  &-clear {
+    @include button;
+    color: #4d7ea8;
+    background: transparent;
+    border: 3px solid #4d7ea8;
+    transition: all 1s ease;
+    &:hover {
+      background: #4d7ea8;
+      color: #272932;
+    }
+  }
+}

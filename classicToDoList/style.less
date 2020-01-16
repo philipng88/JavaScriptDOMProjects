@@ -1,0 +1,52 @@
+@mainWhite: #f5f5f5;
+@mainGreen: #80cfa9;
+@mainBlack: #333333;
+@mainRed: #d62828;
+@mainBlue: #11b5e4;
+
+body {
+  background: @mainWhite;
+  color: @mainBlack;
+}
+
+.container {
+  .form-control {
+    border-color: @mainGreen;
+  }
+  .btn-green {
+    border-color: @mainGreen;
+    background: transparent;
+    color: @mainGreen;
+    &:hover {
+      background: @mainGreen;
+      color: @mainBlack;
+    }
+  }
+  .item {
+    justify-content: space-between;
+    .complete-item {
+      color: @mainGreen;
+    }
+    .edit-item {
+      color: @mainBlue;
+    }
+    .delete-item {
+      color: @mainRed;
+    }
+    &-icon {
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+}
+
+// helper classes
+.visibility {
+  opacity: 0.5;
+}
+
+.completed {
+  &:extend(.visibility);
+  text-decoration: line-through;
+}

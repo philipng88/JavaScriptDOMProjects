@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grocery List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: grid;
+        grid-template-columns: 80%;
+        justify-content: center;
+        margin-top: 3rem;
+        background: #828489;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="addItems">
+      <h4 class="addItems-action"></h4>
+      <h2 class="addItems-title">add grocery items</h2>
+      <form>
+        <input type="text" class="addItems-input" autofocus />
+        <button type="submit" class="addItems-submit">Submit</button>
+      </form>
+    </section>
+    <section class="displayItems">
+      <h4 class="displayItems-action"></h4>
+      <h2 class="displayItems-title">grocery items</h2>
+      <div class="grocery-list"></div>
+      <button type="button" class="displayItems-clear">clear items</button>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Budget App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-11 mx-auto pt-3">
+          <h2 class="text-uppercase mb-4">budget app</h2>
+          <div class="row">
+            <div class="col-md-5 my-3">
+              <div
+                class="budget-feedback alert alert-danger font-weight-bold d-none"
+              ></div>
+              <form id="budget-form" class=" budget-form">
+                <div class="form-group">
+                  <label for="budget-input" class="text-capitalize h5"
+                    >please enter your budget</label
+                  >
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="fas fa-dollar-sign"></i
+                      ></span>
+                    </div>
+                    <input type="text" class="form-control" id="budget-input" />
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-outline-success"
+                  id="budget-submit"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+            <div class="col-md-7">
+              <div class="row my-3">
+                <div class="col-4 text-center mb-2">
+                  <h6 class="text-uppercase info-title">budget</h6>
+                  <span class="budget-icon"
+                    ><i class="fas fa-piggy-bank"></i
+                  ></span>
+                  <h4 class="text-uppercase mt-2 budget" id="budget">
+                    <span>$ </span><span id="budget-amount">0.00</span>
+                  </h4>
+                </div>
+                <div class="col-4 text-center">
+                  <h6 class="text-uppercase info-title">expenses</h6>
+                  <span class="expense-icon"
+                    ><i class="far fa-credit-card"></i
+                  ></span>
+                  <h4 class="text-uppercase mt-2 expense" id="expense">
+                    <span>$ </span><span id="expense-amount">0.00</span>
+                  </h4>
+                </div>
+                <div class="col-4 text-center">
+                  <h6 class="text-uppercase info-title">balance</h6>
+                  <span class="balance-icon"
+                    ><i class="fas fa-balance-scale"></i
+                  ></span>
+                  <h4 class="text-uppercase mt-2 balance" id="balance">
+                    <span>$ </span><span id="balance-amount">0.00</span>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 my-3">
+              <div
+                class="expense-feedback alert alert-danger font-weight-bold d-none"
+              >
+                expense feedback
+              </div>
+              <form id="expense-form" class=" expense-form">
+                <div class="form-group">
+                  <label for="expense-input" class="text-capitalize h5"
+                    >please enter your expense</label
+                  >
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="fas fa-file-invoice"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      placeholder="e.g., Rent"
+                      class="form-control"
+                      id="expense-input"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="amount-input" class="text-capitalize h5"
+                    >please enter expense amount</label
+                  >
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="fas fa-dollar-sign"></i
+                      ></span>
+                    </div>
+                    <input type="text" class="form-control" id="amount-input" />
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-outline-danger"
+                  id="expense-submit"
+                >
+                  Add Expense
+                </button>
+              </form>
+            </div>
+            <div class="col-md-7 my-3">
+              <table class="table table-hover text-center">
+                <thead>
+                  <tr>
+                    <th>Expense Title</th>
+                    <th>Expense Value</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="expense-table"></tbody>
+              </table>
+              <button
+                type="button"
+                id="clear-data-btn"
+                class="btn btn-outline-warning"
+              >
+                Clear All Data
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

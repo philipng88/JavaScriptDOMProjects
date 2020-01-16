@@ -1,0 +1,21 @@
+@import 'mixins';
+@import 'add-items';
+@import 'display-items';
+
+.alert {
+  @include flash;
+  color: red;
+  border-color: red;
+}
+
+.success {
+  @include flash;
+  color: green;
+  border-color: green;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    grid-template-columns: 50%;
+  }
+}

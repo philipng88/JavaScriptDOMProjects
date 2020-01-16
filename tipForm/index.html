@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tip Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row align-items-center" style="min-height: 100vh;">
+        <div class="col-10 mx-auto col-md-8">
+          <div class="card">
+            <div class="card-title p-2">
+              <h3 class="text-uppercase text-center">tip calculator</h3>
+            </div>
+            <div class="card-body">
+              <form id="tip-form">
+                <div class="my-4">
+                  <h5 class="text-capitalize mb-2">how much was your bill?</h5>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text bill-icon"
+                        ><i class="fas fa-dollar-sign fa-fw"></i
+                      ></span>
+                    </div>
+                    <input
+                      type="text"
+                      pattern="^[0-9](?:,?[0-9])*(?:\.[0-9]{2})?$"
+                      class="form-control form-control-lg"
+                      id="input-bill"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="my-4">
+                  <h5 class="text-capitalize mb-2">
+                    how many people are sharing the bill?
+                  </h5>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text user-icon"
+                        ><i class="fas fa-user fa-fw"></i
+                      ></span>
+                    </div>
+                    <input
+                      type="number"
+                      min="1"
+                      class="form-control form-control-lg"
+                      id="input-users"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="my-4">
+                  <h5 class="text-capitalize mb-2">how was your service?</h5>
+                  <div class="form-group">
+                    <select
+                      class="form-control form-control-lg"
+                      id="input-service"
+                      required
+                    >
+                      <option value="" selected>Choose...</option>
+                      <option value=".2">Great (tip 20%)</option>
+                      <option value=".15">Ok (tip 15%)</option>
+                      <option value=".1">Bad (tip 10%)</option>
+                    </select>
+                  </div>
+                </div>
+                <input
+                  type="submit"
+                  class="d-block mx-auto text-capitalize btn submitBtn w-75"
+                  value="calculate"
+                />
+              </form>
+              <div class="results text-center my-3 d-none">
+                <h3>Tip Amount: $<span id="tip-amount"></span></h3>
+                <h3>Total Amount: $<span id="total-amount"></span></h3>
+                <h3>Each Person Owes: $<span id="person-amount"></span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

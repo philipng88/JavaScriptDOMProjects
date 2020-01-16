@@ -1,0 +1,36 @@
+body {
+  background: #86bbd8;
+}
+
+.card-title {
+  background: #336699;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  color: #f5f5f5;
+}
+
+.card {
+  border: none;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.bill-icon,
+.user-icon {
+  background: #336699;
+  color: #f5f5f5;
+}
+
+.submitBtn {
+  background: #336699;
+  font-size: 1.2rem;
+  color: #f5f5f5;
+}
+
+.submitBtn:hover {
+  background: #86bbd8;
+  color: #333;
+}

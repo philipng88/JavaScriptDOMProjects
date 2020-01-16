@@ -1,0 +1,56 @@
+.cart {
+  position: absolute;
+  min-height: 10rem;
+  background: $mainWhite;
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  background: $mainYellow;
+  width: 0;
+  overflow: hidden;
+  z-index: 1;
+  &-item {
+    transition: all 2s ease-in-out;
+    &-remove {
+      color: $mainPink;
+      transition: all 1s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+        color: $mainBlack;
+      }
+    }
+    &-price {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+/* cart buttons */
+.btn-pink {
+  color: $mainPink !important;
+  border-color: $mainPink !important;
+  &:hover {
+    background: $mainPink !important;
+    color: $mainBlack !important;
+  }
+}
+.btn-black {
+  color: $mainBlack !important;
+  border-color: $mainBlack !important;
+  &:hover {
+    color: $mainPink !important;
+    background: $mainBlack !important;
+  }
+}
+
+.show-cart {
+  width: 18rem;
+  padding: 2rem 1.5rem;
+  transform: rotateY(-360deg);
+}
+
+@media screen and (max-width: 768px) {
+  .show-cart {
+    width: 100%;
+  }
+}

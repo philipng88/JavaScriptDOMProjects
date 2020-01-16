@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Course Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="columns">
+      <div class="column is-three-fifths is-offset-one-fifth has-text-centered">
+        <h2 class="is-capitalized title is-2">get a free course</h2>
+        <form id="customer-form">
+          <div class="field has-text-left">
+            <label class="label">Customer Name</label>
+            <p class="control has-icons-left has-icons-right">
+              <span class="icon is-left"><i class="fas fa-user"></i></span>
+              <input type="text" class="input name is-primary" id="name" />
+              <span class="icon is-right"><i class="fas"></i></span>
+            </p>
+            <p class="help is-danger is-hidden">Please fill out this field</p>
+          </div>
+          <div class="field has-text-left">
+            <label class="label">Course Name</label>
+            <p class="control has-icons-left has-icons-right">
+              <span class="icon is-left"><i class="fas fa-book"></i></span>
+              <input type="text" class="input course is-primary" id="course" />
+              <span class="icon is-right"><i class="fas"></i></span>
+            </p>
+            <p class="help is-danger is-hidden">Please fill out this field</p>
+          </div>
+          <div class="field has-text-left">
+            <label class="label">Author</label>
+            <p class="control has-icons-left has-icons-right">
+              <span class="icon is-left"
+                ><i class="fas fa-user-circle"></i
+              ></span>
+              <input type="text" class="input author is-primary" id="author" />
+              <span class="icon is-right"><i class="fas"></i></span>
+            </p>
+            <p class="help is-danger is-hidden">Please fill out this field</p>
+          </div>
+          <button
+            type="submit"
+            class="button is-primary is-fullwidth submitBtn is-uppercase"
+          >
+            submit
+          </button>
+        </form>
+        <div
+          class="feedback notification is-info is-light is-hidden"
+          style="margin-top: 15px;"
+        >
+          Processing...
+        </div>
+        <div class="customer-list is-hidden" style="margin-top: 15px;">
+          <table class="table is-hoverable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Author</th>
+              </tr>
+            </thead>
+            <tbody id="customer-list-items"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
