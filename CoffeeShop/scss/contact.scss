@@ -1,0 +1,57 @@
+.contact {
+  background: $brown;
+  .section-title {
+    &__name {
+      color: $brightYellow;
+    }
+  }
+  .contact-container {
+    max-width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    row-gap: 1rem;
+    @media screen and (min-width: 992px) {
+      grid-template-columns: 2fr 1fr;
+      column-gap: 2rem;
+    }
+    .contact-map {
+      border: 0;
+      @media screen and (min-width: 992px) {
+        align-self: center;
+      }
+    }
+    .contact-info {
+      display: grid;
+      justify-content: center;
+      @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+        order: -1;
+      }
+      @media screen and (min-width: 992px) {
+        grid-template-columns: 1fr;
+        order: 0;
+      }
+      .contact-item {
+        margin: 1rem 0;
+        padding: 0.5rem;
+        &__icon {
+          font-size: 3rem;
+          color: $yellow;
+        }
+        &__title {
+          text-transform: uppercase;
+          margin: 0.5rem 0;
+          letter-spacing: 0.25rem;
+          font-style: italic;
+          color: $grey;
+          font-weight: 900;
+        }
+        &__text {
+          font-size: 1rem;
+          text-transform: uppercase;
+          color: $grey;
+        }
+      }
+    }
+  }
+}

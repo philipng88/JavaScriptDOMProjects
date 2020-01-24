@@ -1,0 +1,89 @@
+.drink {
+  background: $brown;
+  color: $brightYellow;
+  text-transform: capitalize;
+  &-form {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 70%;
+    justify-content: center;
+    row-gap: 1.25rem;
+    &__feedback {
+      border: 0.1rem solid $brightYellow;
+      padding: 0.25rem;
+      display: none;
+    }
+    &__feedback.error {
+      @extend .drink-form__feedback;
+      display: block;
+      color: red;
+      border-color: red;
+    }
+    &__feedback.success {
+      @extend .drink-form__feedback;
+      display: block;
+      color: green;
+      border-color: green;
+    }
+    &__title {
+      font-size: 3rem;
+    }
+    &__input {
+      input {
+        width: 100%;
+        @include inputStyles;
+        &::placeholder {
+          color: $darkBrown;
+        }
+      }
+    }
+    .input-submit {
+      @include inputStyles;
+      background: $yellow;
+      color: $black;
+      transition: all 0.5s linear;
+      -webkit-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+      -ms-transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      cursor: pointer;
+      text-transform: uppercase;
+      &:hover {
+        opacity: 8;
+      }
+    }
+  }
+  &-card {
+    @extend .drink-form;
+    &__title {
+      @extend .drink-form__title;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: 100%;
+      row-gap: 2rem;
+      @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        .person {
+          display: grid;
+          grid-template-columns: auto auto 1fr;
+          align-items: center;
+          text-align: left;
+          gap: 1rem;
+          border: 0.1rem solid rgba(111, 87, 77, 0.6);
+          padding: 1rem;
+          border-radius: 0.5rem;
+          font-size: 1.5rem;
+          &__thumbnail {
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

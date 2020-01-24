@@ -1,0 +1,144 @@
+.work-container {
+  max-width: 90vw;
+  margin: 2rem auto;
+  @media screen and (min-width: 576px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  @media screen and (min-width: 992px) {
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      'one one two three'
+      'one one four four'
+      'five six seven seven'
+      'eight nine seven seven';
+  }
+  .work-item {
+    background: linear-gradient($yellow, $yellow);
+    overflow: hidden;
+    position: relative;
+    &__img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      transition: all 1s linear;
+      -webkit-transition: all 1s linear;
+      -moz-transition: all 1s linear;
+      -ms-transition: all 1s linear;
+      -o-transition: all 1s linear;
+      opacity: 1;
+    }
+    &__icon {
+      position: absolute;
+      color: $brightYellow;
+      top: 50%;
+      left: 50%;
+      display: inline-block;
+      font-size: 4rem;
+      text-decoration: none;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transform: scale(0);
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      &:hover {
+        color: $brown;
+        cursor: pointer;
+      }
+    }
+  }
+  .work-item:hover {
+    .work-item__img {
+      opacity: 0.5;
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+    }
+    .work-item__icon {
+      transform: scale(1.3) translate(-50%, -50%);
+      -webkit-transform: scale(1.3) translate(-50%, -50%);
+      -moz-transform: scale(1.3) translate(-50%, -50%);
+      -ms-transform: scale(1.3) translate(-50%, -50%);
+      -o-transform: scale(1.3) translate(-50%, -50%);
+    }
+  }
+  .item-1 {
+    grid-area: one;
+  }
+  .item-2 {
+    grid-area: two;
+  }
+  .item-3 {
+    grid-area: three;
+  }
+  .item-4 {
+    grid-area: four;
+  }
+  .item-5 {
+    grid-area: five;
+  }
+  .item-6 {
+    grid-area: six;
+  }
+  .item-7 {
+    grid-area: seven;
+  }
+  .item-8 {
+    grid-area: eight;
+  }
+  .item-9 {
+    grid-area: nine;
+  }
+}
+
+.work-modal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  &__item {
+    background: url('../img/work-1.jpeg') center/cover;
+    height: 70vh;
+    width: 80vw;
+    border-radius: 0.4rem;
+    border: 0.5rem solid $yellow;
+    @media screen and (min-width: 768px) {
+      height: 80vh;
+      width: 60vw;
+    }
+  }
+  &__close {
+    position: fixed;
+    font-size: 3rem;
+    color: $brightYellow;
+    top: 5%;
+    right: 12%;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    &:hover {
+      color: red;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@mixin inputStyles {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: rgba(111, 87, 77, 0.6);
+  color: $darkBrown;
+  border: none;
+  outline: none;
+}

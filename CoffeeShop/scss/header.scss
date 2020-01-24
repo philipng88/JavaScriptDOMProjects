@@ -1,0 +1,51 @@
+.header {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 80%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  @media screen and (max-width: 768px) {
+    background: url('../img/headerBcg.jpeg') center/cover fixed no-repeat;
+  }
+  .banner {
+    text-align: center;
+    z-index: 3;
+    &__title {
+      font-size: 4rem;
+      color: $brightYellow;
+      @media screen and (min-width: 768px) {
+        font-size: 9rem;
+      }
+    }
+    &__icons {
+      width: 50%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 2rem);
+      column-gap: 0.5rem;
+      justify-content: center;
+      .banner__social-icon {
+        display: block;
+        text-decoration: none;
+        color: $black;
+        border: 0.1rem solid $black;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        padding: 0.25rem;
+        transition: all 0.5s linear;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        &:hover {
+          background: $brightYellow;
+          color: $black;
+        }
+      }
+    }
+  }
+}

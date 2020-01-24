@@ -1,0 +1,60 @@
+.bell-fonts {
+  font-family: 'La Belle Aurore', cursive;
+}
+
+.nav.nav--show {
+  width: 10rem;
+}
+
+.video__switch-container {
+  .video__switch {
+    &-btn.btnSlide {
+      left: 50%;
+    }
+  }
+}
+
+.section-padding {
+  padding: 3rem 0;
+}
+
+.grid-container {
+  max-width: 90vw;
+  @media screen and (min-width: 768px) {
+    max-width: 75vw;
+  }
+  margin: 2rem auto;
+  display: grid;
+  row-gap: 2rem;
+}
+
+.grid-container--medium-2 {
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+  }
+}
+
+.section-title {
+  padding: 1rem 0.5rem;
+  &__name {
+    font-size: 3rem;
+    text-transform: capitalize;
+  }
+  &__underline {
+    background: $yellow;
+    width: 5rem;
+    height: 0.25rem;
+  }
+  &__text {
+    letter-spacing: 0.1rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+    color: $grey;
+  }
+}
+
+.section-title--left {
+  margin-left: 10rem;
+}

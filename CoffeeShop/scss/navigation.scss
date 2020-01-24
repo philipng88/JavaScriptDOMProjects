@@ -1,0 +1,41 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(242, 180, 80, 0.9);
+  z-index: 3;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.25s linear;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  &__links {
+    list-style-type: none;
+    .nav__single-link {
+      display: block;
+      text-decoration: none;
+      color: $brown;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      &:hover {
+        background: $brown;
+        color: rgba(242, 180, 80, 0.9);
+        padding-left: 1.5rem;
+      }
+    }
+    .nav__single-link.nav__logo {
+      cursor: not-allowed;
+      &:hover {
+        background: $grey;
+      }
+    }
+  }
+}
