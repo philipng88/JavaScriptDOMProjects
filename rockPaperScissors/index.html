@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Rock Paper Scissors</h1>
+        <button id="restart" class="restart-btn">Restart Game</button>
+        <div id="score" class="score">
+          <p>You: <span id="player-score">0</span></p>
+          <p>Computer: <span id="computer-score">0</span></p>
+        </div>
+      </header>
+      <h2>Make Your Selection</h2>
+      <div class="choices">
+        <i id="rock" class="choice fas fa-hand-rock fa-10x"></i>
+        <i id="paper" class="choice fas fa-hand-paper fa-10x"></i>
+        <i id="scissors" class="choice fas fa-hand-scissors fa-10x"></i>
+      </div>
+    </div>
+    <div class="modal">
+      <div id="result" class="modal-content"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
