@@ -1,0 +1,21 @@
+@import './variables.css';
+@import './navbar.css';
+@import './hero.css';
+@import './products.css';
+@import './cart.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #222;
+  background: #fff;
+  font-family: 'Lato', sans-serif;
+}
