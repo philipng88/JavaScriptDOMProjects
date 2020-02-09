@@ -100,6 +100,7 @@ class UI {
       </div>
     `
     );
+    clearCartBtn.classList.remove('hide');
   }
   showCart() {
     cartOverlay.classList.add('setVisible');
@@ -115,11 +116,12 @@ class UI {
     this.populateCart(cart);
     cartBtn.addEventListener('click', this.showCart);
     closeCartBtn.addEventListener('click', this.hideCart);
+    if (cart.length === 0) clearCartBtn.classList.add('hide');
   }
   populateCart(cart) {
     cart.forEach(item => this.addCartItem(item));
   }
-  cartLogic() {
+  cartActions() {
     clearCartBtn.addEventListener('click', () => this.clearCart());
     cartContent.addEventListener('click', event => {
       let id = event.target.dataset.id;
@@ -149,22 +151,21 @@ class UI {
         default:
           break;
       }
+      if (Storage.getCart().length === 0) clearCartBtn.classList.add('hide');
     });
   }
   clearCart() {
     const cartItems = cart.map(item => item.id);
-    if (cartItems.length > 0) {
-      if (window.confirm('Are you sure you wish to remove all items?')) {
-        cartItems.forEach(id => this.removeItem(id));
-        // Remove from DOM
-        // option 1: with while loop
-        // while (cartContent.firstChild)
-        //   cartContent.removeChild(cartContent.firstChild);
-        // option 2: set innerHTML to an empty string
-        cartContent.innerHTML = '';
-      }
-    } else {
-      alert('There are no items to remove');
+    if (window.confirm('Are you sure you wish to remove all items?')) {
+      cartItems.forEach(id => this.removeItem(id));
+      // Remove from DOM
+      // option 1: with while loop
+      // while (cartContent.firstChild)
+      //   cartContent.removeChild(cartContent.firstChild);
+      // option 2: set innerHTML to an empty string
+      cartContent.innerHTML = '';
+      this.hideCart();
+      clearCartBtn.classList.add('hide');
     }
   }
   removeItem(id) {
@@ -211,6 +212,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(() => {
       ui.getCartButtons();
-      ui.cartLogic();
+      ui.cartActions();
     });
 });
