@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wikipedia Search</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <img src="images/logo.png" alt="Wikipedia Logo" class="main-logo" />
+      <form>
+        <input
+          type="text"
+          class="main-search"
+          id="main-search"
+          placeholder="Search Wikipedia"
+        />
+        <button type="submit" class="main-btn" id="main-btn">Search</button>
+      </form>
+      <img
+        src="images/loading.gif"
+        alt="Loading Icon"
+        class="loading-icon"
+        id="loading-icon"
+      />
+      <ul class="results" id="results"></ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

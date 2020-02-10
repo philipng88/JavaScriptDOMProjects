@@ -93,6 +93,10 @@
   cursor: pointer;
 }
 
+.remove-item:hover {
+  color: #ff3860;
+}
+
 .fa-chevron-up,
 .fa-chevron-down {
   color: var(--primaryColor);

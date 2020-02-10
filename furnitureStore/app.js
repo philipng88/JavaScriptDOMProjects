@@ -144,14 +144,13 @@ class UI {
             this.setCartValues(cart);
             event.target.previousElementSibling.innerText = item.amount;
           } else {
-            cartContent.removeChild(event.target.parentElement.parentElement);
-            this.removeItem(id);
+            item.amount = 1;
           }
           break;
         default:
           break;
       }
-      if (Storage.getCart().length === 0) clearCartBtn.classList.add('hide');
+      if (cart.length === 0) clearCartBtn.classList.add('hide');
     });
   }
   clearCart() {
