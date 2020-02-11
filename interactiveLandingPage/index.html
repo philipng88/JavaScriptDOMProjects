@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="https://randomuser.me/api/portraits/lego/1.jpg" alt="User" />
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <header>
+      <button id="toggle" class="toggle">
+        <i class="fas fa-bars fa-2x" id="toggle-icon"></i>
+      </button>
+      <h1>Landing Page</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium,
+        commodi!
+      </p>
+      <button class="cta-btn" id="open">Sign Up</button>
+    </header>
+    <div class="container">
+      <h2>What is this landing page about?</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus,
+        facere amet? Itaque maiores quaerat cumque doloribus explicabo
+        laudantium, nisi ducimus ex totam quia? Amet nesciunt sequi quam unde
+        voluptas eligendi.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+        consequatur laborum voluptatibus vel sequi aspernatur corporis quos
+        eaque amet iste.
+      </p>
+      <h2>Tell Me More</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita,
+        ipsum? Totam, rerum itaque, eius id expedita at quisquam ullam doloribus
+        culpa aliquam, cumque mollitia obcaecati maxime hic. Magnam repellendus
+        recusandae commodi unde quisquam, eos neque atque porro corrupti, eum
+        quidem.
+      </p>
+      <h2>Benefits</h2>
+      <ul>
+        <li>Lifetime Access</li>
+        <li>30-day Money Back Guarantee</li>
+        <li>Tailored Customer Support</li>
+      </ul>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eum quia
+        sit doloremque dolores ut explicabo quod, magnam excepturi qui atque,
+        corrupti error harum velit labore, placeat exercitationem! Officiis at
+        repudiandae repellat expedita voluptas accusamus neque illum nam,
+        cupiditate quasi provident ea quod soluta delectus harum voluptatum,
+        fugit veritatis corporis amet aperiam commodi facere. Illo, temporibus
+        nihil dolor dolore dolorum tempora nesciunt reiciendis officiis ex
+        deleniti facilis, error possimus? Culpa?
+      </p>
+    </div>
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-header">
+          <h3>Sign Up</h3>
+        </div>
+        <div class="modal-content">
+          <p>Register with us to get offers, support, and more</p>
+          <form class="modal-form">
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input type="text" id="name" class="form-input" />
+              <small class="error-msg"></small>
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input type="text" id="email" class="form-input" />
+              <small class="error-msg"></small>
+            </div>
+            <div class="form-control">
+              <label for="password">Password</label>
+              <input type="password" id="password" class="form-input" />
+              <small class="error-msg"></small>
+            </div>
+            <div class="form-control">
+              <label for="password2">Confirm Password</label>
+              <input type="password" id="password2" class="form-input" />
+              <small class="error-msg"></small>
+            </div>
+            <input type="submit" value="Submit" class="submit-btn" />
+            <button type="button" class="reset-form-btn">Reset Form</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
