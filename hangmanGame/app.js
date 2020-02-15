@@ -6,6 +6,9 @@ const playAgainBtn = document.getElementById('play-button');
 const popup = document.getElementById('popup-container');
 const notification = document.getElementById('notification-container');
 const finalMessage = document.getElementById('final-message');
+const finalMessageRevealWord = document.getElementById(
+  'final-message-reveal-word'
+);
 const figureParts = document.querySelectorAll('.figure-part');
 
 const generateWord = arr => arr.reduce((x, y) => (x.length > y.length ? x : y));
@@ -14,8 +17,9 @@ let correctLetters = [];
 let wrongLetters = [];
 let playable = true;
 
-const handleGameFinish = message => {
+const handleGameFinish = (message, revealText) => {
   finalMessage.innerText = message;
+  finalMessageRevealWord.innerHTML = revealText;
   playable = false;
   popup.style.display = 'flex';
 };
@@ -33,7 +37,7 @@ const displayWord = () => {
       .join('')}
   `;
   if (wordEl.innerText.replace(/\n/g, '') === selectedWord)
-    handleGameFinish('Congratulations! You won! 😀');
+    handleGameFinish('Congratulations! You won! 😀', '');
 };
 
 const updateWrongLettersEl = () => {
@@ -46,7 +50,10 @@ const updateWrongLettersEl = () => {
       ? (part.style.display = 'block')
       : (part.style.display = 'none');
     if (wrongLetters.length === figureParts.length)
-      handleGameFinish(`Sorry, you lost 🙁. The word was '${selectedWord}'`);
+      handleGameFinish(
+        `Sorry, you lost 🙁`,
+        `The word was: <span style='text-transform:uppercase'>${selectedWord}</span>`
+      );
   });
 };
 

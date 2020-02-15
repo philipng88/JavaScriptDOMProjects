@@ -6,25 +6,29 @@ const more = document.getElementById('more');
 const apiURL = 'https://api.lyrics.ovh';
 
 const showData = data => {
-  result.innerHTML = `
-    <ul class="songs">
-      ${data.data
-        .map(
-          song => `
-        <li>
-          <span><strong>${song.artist.name}</strong> - ${song.title}</span>
-          <button 
-            class="btn get-lyrics-btn" 
-            data-artist="${song.artist.name}" 
-            data-songtitle="${song.title}"
-          >Get Lyrics
-          </button>
-        </li>
-      `
-        )
-        .join('')}
-    </ul>
-  `;
+  if (data.data.length) {
+    result.innerHTML = `
+      <ul class="songs">
+        ${data.data
+          .map(
+            song => `
+          <li>
+            <span><strong>${song.artist.name}</strong> - ${song.title}</span>
+            <button 
+              class="btn get-lyrics-btn" 
+              data-artist="${song.artist.name}" 
+              data-songtitle="${song.title}"
+            >Get Lyrics
+            </button>
+          </li>
+        `
+          )
+          .join('')}
+      </ul>
+    `;
+  } else {
+    result.innerHTML = '<p>No results found. Please try another search.</p>';
+  }
   if (data.prev || data.next) {
     more.innerHTML = `
       ${
@@ -59,10 +63,14 @@ const getLyrics = async (artist, songTitle) => {
   const res = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
   const data = await res.json();
   const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
-  result.innerHTML = `
-    <h2><strong>${artist}</strong> - ${songTitle}</h2>
-    <span>${lyrics}</span>
-  `;
+  if (data.error) {
+    result.innerHTML = data.error;
+  } else {
+    result.innerHTML = `
+      <h2><strong>${artist}</strong> - ${songTitle}</h2>
+      <span>${lyrics}</span>
+    `;
+  }
   more.innerHTML = '';
 };
 
