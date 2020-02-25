@@ -9,8 +9,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body>
+    <div class="fixed-action-btn hide">
+      <div class="btn-floating btn-large" onclick="scrollToTop()">
+        <i class="large material-icons">arrow_upward</i>
+      </div>
+    </div>
     <div class="container">
       <h1 class="center-align">Mini JavaScript Projects</h1>
       <input type="text" id="filterInput" placeholder="Search projects..." />
@@ -138,6 +152,7 @@
       </ul>
     </div>
     <script>
+      // Search filter
       const filterInput = document.getElementById('filterInput');
       const filterProjects = () => {
         const filterValue = filterInput.value.toUpperCase();
@@ -151,6 +166,20 @@
         });
       };
       filterInput.addEventListener('keyup', filterProjects);
+
+      // Scroll to top
+      const scrollTopBtnContainer = document.querySelector('.fixed-action-btn');
+      const breakpoint = 20;
+      window.onscroll = () => {
+        document.body.scrollTop > breakpoint ||
+        document.documentElement.scrollTop > breakpoint
+          ? scrollTopBtnContainer.classList.remove('hide')
+          : scrollTopBtnContainer.classList.add('hide');
+      };
+      const scrollToTop = () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      };
     </script>
   </body>
 </html>

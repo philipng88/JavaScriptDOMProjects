@@ -17,7 +17,8 @@ const displayData = data => {
         <p class="search-item__text">${item.snippet}</p>
         <a 
           href="https://en.wikipedia.org/?curid=${item.pageid}"
-          target="_blank" 
+          target="_blank"
+          rel="noopener noreferrer" 
           class="search-item__link"
         >read more...
         </a>
