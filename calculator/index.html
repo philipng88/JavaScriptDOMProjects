@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="calculator__display"></div>
+        <div class="calculator__keys">
+          <button class="key-operator" value="+">
+            <i class="fas fa-plus"></i>
+          </button>
+          <button class="key-operator" value="-">
+            <i class="fas fa-minus"></i>
+          </button>
+          <button class="key-operator" value="*">
+            <i class="fas fa-times"></i>
+          </button>
+          <button class="key-operator" value="/">
+            <i class="fas fa-divide"></i>
+          </button>
+          <button value="7">7</button>
+          <button value="8">8</button>
+          <button value="9">9</button>
+          <button value="4">4</button>
+          <button value="5">5</button>
+          <button value="6">6</button>
+          <button value="1">1</button>
+          <button value="2">2</button>
+          <button value="3">3</button>
+          <button value="0">0</button>
+          <button class="decimal" value=".">.</button>
+          <button class="all-clear">AC</button>
+          <button class="key-operator" id="key-equal" value="=">
+            <i class="fas fa-equals"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
