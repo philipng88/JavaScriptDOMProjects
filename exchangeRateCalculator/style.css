@@ -34,24 +34,26 @@ button {
   width: 150px;
 }
 
-.currency {
-  padding: 40px 0;
+.currency,
+.swap-rate-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.currency {
+  padding: 20px 0;
+}
+
+.currency input,
+.amount-label {
+  text-align: right;
 }
 
 .currency input {
   border: 0;
   background: transparent;
   font-size: 30px;
-  text-align: right;
-}
-
-.swap-rate-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .rate {
