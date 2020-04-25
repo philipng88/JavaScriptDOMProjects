@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speech Text Reader</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@blaze/css@9.2.0/dist/blaze/blaze.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="u-centered">Speech Text Reader</h1>
+      <button id="toggle" class="btn btn-toggle">Toggle Text Box</button>
+      <div id="text-box" class="text-box">
+        <div id="close" class="close" title="Close">
+          <i class="fas fa-times"></i>
+        </div>
+        <h3>Choose Voice</h3>
+        <select id="voices" class="c-field"></select>
+        <textarea
+          id="text"
+          class="c-field"
+          placeholder="Enter text to read..."
+        ></textarea>
+        <button id="read" class="btn">Read Text</button>
+      </div>
+      <main></main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
