@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fancy Form</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1 class="logo">Fancy Form</h1>
+      <div id="form-box">
+        <i id="prev-btn" class="fas fa-arrow-left"></i>
+        <i id="next-btn" class="fas fa-arrow-right"></i>
+        <div id="input-group">
+          <input id="input-field" type="text" required />
+          <label id="input-label"></label>
+          <div id="input-progress"></div>
+        </div>
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

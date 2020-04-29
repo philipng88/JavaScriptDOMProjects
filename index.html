@@ -28,141 +28,78 @@
     <div class="container">
       <h1 class="center-align">Mini JavaScript Projects</h1>
       <input type="text" id="filterInput" placeholder="Search projects..." />
-      <ul id="projects" class="collection with-header">
-        <li class="collection-item">
-          <a href="animatedCounter/index.html">Animated Counter</a>
-        </li>
-        <li class="collection-item">
-          <a href="bgImgSlider/index.html">Background Image Slider</a>
-        </li>
-        <li class="collection-item">
-          <a href="bgImgSlider-v2/index.html"
-            >Background Image Slider (alternate)</a
-          >
-        </li>
-        <li class="collection-item">
-          <a href="breakoutGame/index.html">Breakout Game</a>
-        </li>
-        <li class="collection-item">
-          <a href="breathingExercise/index.html">Breathing Exercise</a>
-        </li>
-        <li class="collection-item">
-          <a href="budgetCalculator/index.html">Budget Calculator</a>
-        </li>
-        <li class="collection-item">
-          <a href="budgetCalculator-v2/index.html"
-            >Budget Calculator (alternate)</a
-          >
-        </li>
-        <li class="collection-item">
-          <a href="calculator/index.html">Calculator</a>
-        </li>
-        <li class="collection-item">
-          <a href="classicToDoList/index.html">Classic To-do List</a>
-        </li>
-        <li class="collection-item">
-          <a href="CoffeeShop/index.html">Coffee Shop</a>
-        </li>
-        <li class="collection-item">
-          <a href="colorGame/index.html">Color Game</a>
-        </li>
-        <li class="collection-item">
-          <a href="counter/index.html">Counter</a>
-        </li>
-        <li class="collection-item">
-          <a href="courseForm/index.html">Course Signup Form</a>
-        </li>
-        <li class="collection-item">
-          <a href="customVideoPlayer/index.html">Custom Video Player</a>
-        </li>
-        <li class="collection-item">
-          <a href="dessertsCart/index.html">Desserts Cart</a>
-        </li>
-        <li class="collection-item">
-          <a href="digitalClock/index.html">Digital Clock</a>
-        </li>
-        <li class="collection-item">
-          <a href="exchangeRateCalculator/index.html"
-            >Exchange Rate Calculator</a
-          >
-        </li>
-        <li class="collection-item">
-          <a href="flashcards/index.html">Flashcards</a>
-        </li>
-        <li class="collection-item">
-          <a href="flashcards-v2/index.html">Flashcards (alternate)</a>
-        </li>
-        <li class="collection-item">
-          <a href="groceryList/index.html">Grocery List</a>
-        </li>
-        <li class="collection-item">
-          <a href="groceryList-v2/index.html">Grocery List (alternate)</a>
-        </li>
-        <li class="collection-item">
-          <a href="hangmanGame/index.html">Hangman Game</a>
-        </li>
-        <li class="collection-item">
-          <a href="hexGenerator/index.html">Hex Generator</a>
-        </li>
-        <li class="collection-item">
-          <a href="infiniteScrollPosts/index.html">Infinite Scroll Posts</a>
-        </li>
-        <li class="collection-item">
-          <a href="interactiveLandingPage/index.html"
-            >Interactive Landing Page</a
-          >
-        </li>
-        <li class="collection-item">
-          <a href="lyricsSearch/index.html">Lyrics Search</a>
-        </li>
-        <li class="collection-item">
-          <a href="mealFinder/index.html">Meal Finder</a>
-        </li>
-        <li class="collection-item">
-          <a href="movieSeatBooking/index.html">Movie Seat Booking</a>
-        </li>
-        <li class="collection-item">
-          <a href="musicPlayer/index.html">Music Player</a>
-        </li>
-        <li class="collection-item">
-          <a href="navbar/index.html">Navbar</a>
-        </li>
-        <li class="collection-item">
-          <a href="newYearCountdown/index.html">New Year Countdown</a>
-        </li>
-        <li class="collection-item">
-          <a href="passMessage/index.html">Pass Message</a>
-        </li>
-        <li class="collection-item">
-          <a href="passwordGenerator/index.html">Password Generator</a>
-        </li>
-        <li class="collection-item">
-          <a href="patatapClone/index.html">Patatap Clone</a>
-        </li>
-        <li class="collection-item">
-          <a href="rockPaperScissors/index.html">Rock Paper Scissors Game</a>
-        </li>
-        <li class="collection-item">
-          <a href="sortableList/index.html">Sortable List</a>
-        </li>
-        <li class="collection-item">
-          <a href="speechTextReader/index.html">Speech Text Reader</a>
-        </li>
-        <li class="collection-item">
-          <a href="tipForm/index.html">Tip Calculator</a>
-        </li>
-        <li class="collection-item">
-          <a href="typingGame/index.html">Typing Game</a>
-        </li>
-        <li class="collection-item">
-          <a href="weightConverter/index.html">Weight Converter</a>
-        </li>
-        <li class="collection-item">
-          <a href="wikipediaSearch/index.html">Wikipedia Search</a>
-        </li>
-      </ul>
+      <ul id="projects" class="collection with-header"></ul>
     </div>
     <script>
+      // Populate projects list
+      const projectsCollection = [
+        { directory: 'animatedCounter', title: 'Animated Counter' },
+        { directory: 'bgImgSlider', title: 'Background Image Slider' },
+        {
+          directory: 'bgImgSlider-v2',
+          title: 'Background Image Slider (alternate)',
+        },
+        { directory: 'breakoutGame', title: 'Breakout Game' },
+        { directory: 'breathingExercise', title: 'Breathing Exercise' },
+        { directory: 'budgetCalculator', title: 'Budget Calculator' },
+        {
+          directory: 'budgetCalculator-v2',
+          title: 'Budget Calculator (alternate)',
+        },
+        { directory: 'calculator', title: 'Calculator' },
+        { directory: 'classicToDoList', title: 'Classic To-do List' },
+        { directory: 'CoffeeShop', title: 'Coffee Shop' },
+        { directory: 'colorGame', title: 'Color Game' },
+        { directory: 'counter', title: 'Counter' },
+        { directory: 'courseForm', title: 'Course Signup Form' },
+        { directory: 'customVideoPlayer', title: 'Custom Video Player' },
+        { directory: 'dessertsCart', title: 'Desserts Cart' },
+        { directory: 'digitalClock', title: 'Digital Clock' },
+        {
+          directory: 'exchangeRateCalculator',
+          title: 'Exchange Rate Calculator',
+        },
+        { directory: 'fancyForm', title: 'Fancy Form' },
+        { directory: 'flashcards', title: 'Flash Cards' },
+        { directory: 'flashcards-v2', title: 'Flash Cards (alternate)' },
+        { directory: 'groceryList', title: 'Grocery List' },
+        { directory: 'groceryList-v2', title: 'Grocery List (alternate)' },
+        { directory: 'hangmanGame', title: 'Hangman Game' },
+        { directory: 'hexGenerator', title: 'Hex Generator' },
+        { directory: 'infiniteScrollPosts', title: 'Infinite Scroll Posts' },
+        {
+          directory: 'interactiveLandingPage',
+          title: 'Interactive Landing Page',
+        },
+        { directory: 'lyricsSearch', title: 'Lyrics Search' },
+        { directory: 'mealFinder', title: 'Meal Finder' },
+        { directory: 'movieSeatBooking', title: 'Movie Seat Booking' },
+        { directory: 'musicPlayer', title: 'Music Player' },
+        { directory: 'navbar', title: 'Navbar' },
+        { directory: 'newYearCountdown', title: 'New Year Countdown' },
+        { directory: 'passMessage', title: 'Pass Message' },
+        { directory: 'passwordGenerator', title: 'Password Generator' },
+        { directory: 'patatapClone', title: 'Patatap Clone' },
+        { directory: 'rockPaperScissors', title: 'Rock Paper Scissors Game' },
+        { directory: 'sortableList', title: 'Sortable List' },
+        { directory: 'speechTextReader', title: 'Speech Text Reader' },
+        { directory: 'tipForm', title: 'Tip Form' },
+        { directory: 'typingGame', title: 'Typing Game' },
+        { directory: 'weightConverter', title: 'Weight Converter' },
+        { directory: 'wikipediaSearch', title: 'Wikipedia Search' },
+      ];
+
+      projectsCollection.forEach(project =>
+        document.getElementById('projects').insertAdjacentHTML(
+          'beforeend',
+          `
+            <li class='collection-item'>
+              <a href=${project.directory}/index.html>${project.title}</a>
+            </li>
+          `
+        )
+      );
+
       // Search filter
       const filterInput = document.getElementById('filterInput');
       const filterProjects = () => {
@@ -172,8 +109,8 @@
         projects.forEach(project => {
           const projectName = project.firstElementChild.innerText;
           projectName.toUpperCase().includes(filterValue)
-            ? (project.style.display = '')
-            : (project.style.display = 'none');
+            ? project.classList.remove('hide')
+            : project.classList.add('hide');
         });
       };
       filterInput.addEventListener('keyup', filterProjects);
