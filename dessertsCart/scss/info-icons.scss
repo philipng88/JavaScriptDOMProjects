@@ -1,19 +1,21 @@
+@use 'variables';
+
 .cart-info {
-  border: 0.1rem solid $mainBlack;
-  color: $mainBlack;
+  border: 0.1rem solid variables.$mainBlack;
+  color: variables.$mainBlack;
   border-radius: 0.25rem;
   padding: 0.4rem 0.6rem;
   cursor: pointer;
   .cart-info__icon {
-    color: $mainBlack;
+    color: variables.$mainBlack;
     cursor: pointer;
   }
   &:hover {
-    background: $mainPink;
-    border-color: $mainPink;
-    color: $mainWhite;
+    background: variables.$mainPink;
+    border-color: variables.$mainPink;
+    color: variables.$mainWhite;
     .cart-info__icon {
-      color: $mainWhite;
+      color: variables.$mainWhite;
     }
   }
 }

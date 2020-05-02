@@ -1,13 +1,15 @@
+@use 'mixins';
+
 .addItems {
-  @include container;
+  @include mixins.container();
   background: #4d7ea8;
 
   &-action {
-    @include action;
+    @include mixins.action();
   }
 
   &-title {
-    @include title;
+    @include mixins.title();
     color: #b6c2d9;
   }
 
@@ -24,7 +26,7 @@
   }
 
   &-submit {
-    @include button;
+    @include mixins.button();
     color: #b6c2d9;
     background: transparent;
     border: 3px solid #b6c2d9;

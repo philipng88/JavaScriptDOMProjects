@@ -1,15 +1,14 @@
-@import 'variables';
-@import 'mixins';
-@import 'helpers';
-@import 'preloader';
-@import 'header';
-@import 'video';
-@import 'navigation';
-@import 'buttons';
-@import 'about';
-@import 'drink';
-@import 'work';
-@import 'contact';
+@use 'variables';
+@use 'helpers';
+@use 'preloader';
+@use 'header';
+@use 'video';
+@use 'navigation';
+@use 'buttons';
+@use 'about';
+@use 'drink';
+@use 'work';
+@use 'contact';
 
 * {
   margin: 0;
@@ -24,5 +23,5 @@ body {
       rgba(255, 255, 255, 0.85)
     ),
     url('../img/bodyBcg.jpeg');
-  color: $black;
+  color: variables.$black;
 }

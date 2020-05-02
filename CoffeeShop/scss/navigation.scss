@@ -1,3 +1,5 @@
+@use 'variables';
+
 .nav {
   position: fixed;
   top: 0;
@@ -17,7 +19,7 @@
     .nav__single-link {
       display: block;
       text-decoration: none;
-      color: $brown;
+      color: variables.$brown;
       font-size: 1.5rem;
       padding: 0.5rem 1rem;
       transition: all 0.5s ease-in-out;
@@ -26,7 +28,7 @@
       -ms-transition: all 0.5s ease-in-out;
       -o-transition: all 0.5s ease-in-out;
       &:hover {
-        background: $brown;
+        background: variables.$brown;
         color: rgba(242, 180, 80, 0.9);
         padding-left: 1.5rem;
       }
@@ -34,7 +36,7 @@
     .nav__single-link.nav__logo {
       cursor: not-allowed;
       &:hover {
-        background: $grey;
+        background: variables.$grey;
       }
     }
   }

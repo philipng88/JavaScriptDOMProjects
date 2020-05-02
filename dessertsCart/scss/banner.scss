@@ -1,24 +1,26 @@
+@use 'variables';
+
 .max-height {
   min-height: calc(100vh - 76px);
-  background: linear-gradient($yellowTransparent, $yellowTransparent),
+  background: linear-gradient(variables.$yellowTransparent, variables.$yellowTransparent),
     url('img/headerBcg.jpeg') center/cover fixed no-repeat;
   position: relative;
 }
 
 .banner {
-  color: $mainWhite;
+  color: variables.$mainWhite;
   margin-top: -4rem;
   .banner-title {
-    color: $mainPink;
+    color: variables.$mainPink;
     font-size: 4rem;
   }
   .banner-link {
     font-size: 1.5rem;
-    color: $mainBlack;
-    border: 0.2rem solid $mainBlack;
+    color: variables.$mainBlack;
+    border: 0.2rem solid variables.$mainBlack;
     &:hover {
-      background: $mainBlack;
-      color: $mainPink;
+      background: variables.$mainBlack;
+      color: variables.$mainPink;
     }
   }
 }

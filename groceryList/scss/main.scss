@@ -1,15 +1,15 @@
-@import 'mixins';
-@import 'add-items';
-@import 'display-items';
+@use 'mixins';
+@use 'add-items';
+@use 'display-items';
 
 .alert {
-  @include flash;
+  @include mixins.flash();
   color: red;
   border-color: red;
 }
 
 .success {
-  @include flash;
+  @include mixins.flash();
   color: green;
   border-color: green;
 }

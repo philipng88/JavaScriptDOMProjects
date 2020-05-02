@@ -1,9 +1,11 @@
+@use 'variables';
+
 .navBtn {
   position: fixed;
   top: 5%;
   right: 5%;
   font-size: 3.5rem;
-  color: $yellow;
+  color: variables.$yellow;
   cursor: pointer;
 }
 
@@ -18,7 +20,7 @@
     .video__switch {
       position: relative;
       width: 5rem;
-      background: $yellow;
+      background: variables.$yellow;
       display: flex;
       justify-content: space-between;
       padding: 0.25rem;
@@ -32,7 +34,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: $brown;
+        background: variables.$brown;
         height: 100%;
         width: 50%;
         border-radius: 0.5rem;

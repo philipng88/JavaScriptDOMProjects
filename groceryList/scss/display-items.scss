@@ -1,13 +1,15 @@
+@use 'mixins';
+
 .displayItems {
-  @include container;
+  @include mixins.container();
   background: #b6c2d9;
 
   &-action {
-    @include action;
+    @include mixins.action();
   }
 
   &-title {
-    @include title;
+    @include mixins.title();
     color: #4d7ea8;
     margin-bottom: 0.25rem;
   }
@@ -46,7 +48,7 @@
   }
 
   &-clear {
-    @include button;
+    @include mixins.button();
     color: #4d7ea8;
     background: transparent;
     border: 3px solid #4d7ea8;

@@ -1,3 +1,5 @@
+@use 'variables';
+
 .header {
   height: 100vh;
   display: grid;
@@ -13,7 +15,7 @@
     z-index: 3;
     &__title {
       font-size: 4rem;
-      color: $brightYellow;
+      color: variables.$brightYellow;
       @media screen and (min-width: 768px) {
         font-size: 9rem;
       }
@@ -28,8 +30,8 @@
       .banner__social-icon {
         display: block;
         text-decoration: none;
-        color: $black;
-        border: 0.1rem solid $black;
+        color: variables.$black;
+        border: 0.1rem solid variables.$black;
         border-radius: 50%;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
@@ -42,8 +44,8 @@
         -ms-transition: all 0.5s linear;
         -o-transition: all 0.5s linear;
         &:hover {
-          background: $brightYellow;
-          color: $black;
+          background: variables.$brightYellow;
+          color: variables.$black;
         }
       }
     }

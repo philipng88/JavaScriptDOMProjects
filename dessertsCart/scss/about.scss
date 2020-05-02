@@ -1,3 +1,5 @@
+@use 'variables';
+
 .about-img__container {
   position: relative;
   &::before {
@@ -7,7 +9,7 @@
     left: -1.7rem;
     width: 100%;
     height: 100%;
-    outline: 0.5rem solid $mainYellow;
+    outline: 0.5rem solid variables.$mainYellow;
     z-index: -1;
     transition: all 1s ease-in-out;
   }

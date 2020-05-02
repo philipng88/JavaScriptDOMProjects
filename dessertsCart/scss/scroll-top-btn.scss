@@ -1,3 +1,5 @@
+@use 'variables';
+
 #scrollTopBtn {
   display: none;
   position: fixed;
@@ -6,8 +8,8 @@
   z-index: 99;
   border: none;
   outline: none;
-  background-color: $mainPink;
-  color: $mainWhite;
+  background-color: variables.$mainPink;
+  color: variables.$mainWhite;
   cursor: pointer;
   padding: 15px;
   border-radius: 10px;

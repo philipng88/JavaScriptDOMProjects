@@ -1,22 +1,24 @@
+@use 'variables';
+
 .cart {
   position: absolute;
   min-height: 10rem;
-  background: $mainWhite;
+  background: variables.$mainWhite;
   top: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
-  background: $mainYellow;
+  background: variables.$mainYellow;
   width: 0;
   overflow: hidden;
   z-index: 1;
   &-item {
     transition: all 2s ease-in-out;
     &-remove {
-      color: $mainPink;
+      color: variables.$mainPink;
       transition: all 1s ease-in-out;
       &:hover {
         transform: scale(1.1);
-        color: $mainBlack;
+        color: variables.$mainBlack;
       }
     }
     &-price {
@@ -27,19 +29,19 @@
 
 /* cart buttons */
 .btn-pink {
-  color: $mainPink !important;
-  border-color: $mainPink !important;
+  color: variables.$mainPink;
+  border-color: variables.$mainPink;
   &:hover {
-    background: $mainPink !important;
-    color: $mainBlack !important;
+    background: variables.$mainPink;
+    color: variables.$mainBlack;
   }
 }
 .btn-black {
-  color: $mainBlack !important;
-  border-color: $mainBlack !important;
+  color: variables.$mainBlack;
+  border-color: variables.$mainBlack;
   &:hover {
-    color: $mainPink !important;
-    background: $mainBlack !important;
+    color: variables.$mainPink;
+    background: variables.$mainBlack;
   }
 }
 

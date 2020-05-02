@@ -1,3 +1,5 @@
+@use 'variables';
+
 .bell-fonts {
   font-family: 'La Belle Aurore', cursive;
 }
@@ -43,7 +45,7 @@
     text-transform: capitalize;
   }
   &__underline {
-    background: $yellow;
+    background: variables.$yellow;
     width: 5rem;
     height: 0.25rem;
   }
@@ -51,7 +53,7 @@
     letter-spacing: 0.1rem;
     line-height: 1.5;
     margin-top: 1rem;
-    color: $grey;
+    color: variables.$grey;
   }
 }
 

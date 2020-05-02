@@ -1,8 +1,10 @@
+@use 'variables';
+
 .contact {
-  background: $brown;
+  background: variables.$brown;
   .section-title {
     &__name {
-      color: $brightYellow;
+      color: variables.$brightYellow;
     }
   }
   .contact-container {
@@ -36,20 +38,20 @@
         padding: 0.5rem;
         &__icon {
           font-size: 3rem;
-          color: $yellow;
+          color: variables.$yellow;
         }
         &__title {
           text-transform: uppercase;
           margin: 0.5rem 0;
           letter-spacing: 0.25rem;
           font-style: italic;
-          color: $grey;
+          color: variables.$grey;
           font-weight: 900;
         }
         &__text {
           font-size: 1rem;
           text-transform: uppercase;
-          color: $grey;
+          color: variables.$grey;
         }
       }
     }

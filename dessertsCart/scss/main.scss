@@ -1,12 +1,12 @@
-@import 'variables';
-@import 'about';
-@import 'banner';
-@import 'cart';
-@import 'info-icons';
-@import 'lightbox';
-@import 'nav-links';
-@import 'store-items';
-@import 'scroll-top-btn';
+@use 'variables';
+@use 'about';
+@use 'banner';
+@use 'cart';
+@use 'info-icons';
+@use 'lightbox';
+@use 'nav-links';
+@use 'store-items';
+@use 'scroll-top-btn';
 
 html {
   scroll-behavior: smooth;
@@ -14,11 +14,11 @@ html {
 
 body {
   font-family: 'Kaushan Script', cursive;
-  background: $mainWhite;
-  color: $mainBlack;
+  background: variables.$mainWhite;
+  color: variables.$mainBlack;
 }
 
 .search-box {
-  background: $mainPink;
-  color: $mainBlack;
+  background: variables.$mainPink;
+  color: variables.$mainBlack;
 }
