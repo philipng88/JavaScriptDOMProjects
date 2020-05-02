@@ -2,6 +2,7 @@
   { "directory": "animatedCounter", "title": "Animated Counter" },
   { "directory": "bgImgSlider", "title": "Background Image Slider" },
   { "directory": "bgImgSlider-v2", "title": "Background Image Slider (alternate)"},
+  { "directory": "bgImgSlider-v3", "title": "Background Image Slider (full screen)"},
   { "directory": "breakoutGame", "title": "Breakout Game" },
   { "directory": "breathingExercise", "title": "Breathing Exercise" },
   { "directory": "budgetCalculator", "title": "Budget Calculator" },
