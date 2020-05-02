@@ -1,9 +1,9 @@
-$modal-duration: 0.5s;
-$primary-color: #30336b;
-$secondary-color: #be2edd;
-$white-color: #fff;
-$success-color: #2ecc71;
-$error-color: #e74c3c;
+@modal-duration: 0.5s;
+@primary-color: #30336b;
+@secondary-color: #be2edd;
+@white-color: #fff;
+@success-color: #2ecc71;
+@error-color: #e74c3c;
 
 * {
   box-sizing: border-box;
@@ -20,9 +20,9 @@ body.show-nav {
 }
 
 nav {
-  background: $primary-color;
+  background: @primary-color;
   border-right: 2px solid rgba(200, 200, 200, 0.1);
-  color: $white-color;
+  color: @white-color;
   position: fixed;
   top: 0;
   left: 0;
@@ -47,7 +47,7 @@ nav {
       border-bottom: 2px solid rgba(200, 200, 200, 0.1);
       padding: 20px;
       a {
-        color: $white-color;
+        color: @white-color;
         text-decoration: none;
         &:hover {
           text-decoration: underline;
@@ -61,8 +61,8 @@ nav {
 }
 
 header {
-  background-color: $primary-color;
-  color: $white-color;
+  background-color: @primary-color;
+  color: @white-color;
   font-size: 130%;
   position: relative;
   padding: 40px 15px;
@@ -101,7 +101,7 @@ header {
   right: 0;
   bottom: 0;
   .modal {
-    background-color: $white-color;
+    background-color: @white-color;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: absolute;
@@ -112,7 +112,7 @@ header {
     max-width: 100%;
     width: 400px;
     animation-name: modalopen;
-    animation-duration: $modal-duration;
+    animation-duration: @modal-duration;
     .close-btn {
       background: transparent;
       font-size: 25px;
@@ -121,12 +121,12 @@ header {
       right: 0;
       transition: 0.25s ease-in-out;
       &:hover {
-        color: $error-color;
+        color: @error-color;
       }
     }
     &-header {
-      background: $primary-color;
-      color: $white-color;
+      background: @primary-color;
+      color: @white-color;
       padding: 15px;
       h3 {
         margin: 0;
@@ -149,22 +149,22 @@ header {
             font-size: 14px;
             &:focus {
               outline: 0;
-              border-color: $primary-color;
+              border-color: @primary-color;
             }
           }
           .error-msg {
-            color: $error-color;
+            color: @error-color;
             display: none;
           }
         }
         .form-control.success {
           .form-input {
-            border-color: $success-color;
+            border-color: @success-color;
           }
         }
         .form-control.error {
           .form-input {
-            border-color: $error-color;
+            border-color: @error-color;
           }
           .error-msg {
             display: block;
@@ -180,10 +180,10 @@ header {
 
 button,
 input[type='submit'] {
-  background-color: $secondary-color;
+  background-color: @secondary-color;
   border: 0;
   border-radius: 5px;
-  color: $white-color;
+  color: @white-color;
   cursor: pointer;
   padding: 8px 12px;
 }

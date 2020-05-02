@@ -1,13 +1,13 @@
+@lightBlue-color: #a7cdbd;
+@lightGreen-color: #bbe1c3;
+@brown-color: #91785d;
+@darkGreen-color: #869d7a;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-$lightBlue: #a7cdbd;
-$lightGreen: #bbe1c3;
-$brown: #91785d;
-$darkGreen: #869d7a;
 
 body {
   display: grid;
@@ -16,18 +16,18 @@ body {
   justify-content: center;
   margin-top: 3rem;
   text-align: center;
-  background: $lightBlue;
+  background: @lightBlue-color;
 }
 
 .main-search {
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 0.25rem solid $brown;
+  border-bottom: 0.25rem solid @brown-color;
   font-size: 3rem;
   margin: 1rem 0;
   padding: 0.5rem 0;
-  color: $brown;
+  color: @brown-color;
   outline: none;
   &::-webkit-input-placeholder {
     -webkit-transition: opacity 0.3s linear;
@@ -46,13 +46,13 @@ body {
   font-size: 2rem;
   border-radius: 0.25rem;
   background: transparent;
-  color: $brown;
-  border: 0.15rem solid $brown;
+  color: @brown-color;
+  border: 0.15rem solid @brown-color;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   &:hover {
-    background: $brown;
-    color: $lightBlue;
+    background: @brown-color;
+    color: @lightBlue-color;
   }
 }
 
@@ -65,12 +65,12 @@ body {
 .search-item {
   text-align: left;
   list-style-type: none;
-  border: 0.05rem solid $darkGreen;
+  border: 0.05rem solid @darkGreen-color;
   padding: 1rem;
   margin: 1rem 0;
-  background: $lightGreen;
+  background: @lightGreen-color;
   border-radius: 0.5rem;
-  box-shadow: 0 10px 10px $darkGreen;
+  box-shadow: 0 10px 10px @darkGreen-color;
   &__title {
     letter-spacing: 0.05rem;
   }
@@ -79,12 +79,12 @@ body {
   }
   &__link {
     text-decoration: none;
-    color: $brown;
+    color: @brown-color;
     font-size: 1.2rem;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     &:hover {
-      color: $darkGreen;
+      color: @darkGreen-color;
     }
   }
 }
