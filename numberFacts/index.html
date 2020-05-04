@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Facts</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+      .divider::before,
+      .divider::after {
+        content: '';
+        flex: 1;
+        border-bottom: 2px solid #23272b;
+      }
+      .divider::before {
+        margin-right: 0.25em;
+      }
+      .divider::after {
+        margin-left: 0.25em;
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card bg-primary text-white mt-5 p-5">
+            <h1>Number Facts</h1>
+            <p>Enter a number and receive some facts about it</p>
+            <form id="form" class="form-group">
+              <div class="input-group input-group-lg">
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  id="numberInput"
+                  placeholder="Enter a number..."
+                />
+                <div class="input-group-append">
+                  <button class="btn btn-dark" type="submit">
+                    Get Fact
+                    <span
+                      class="spinner-border spinner-border-sm align-baseline d-none"
+                      role="status"
+                      aria-hidden="true"
+                      id="submitBtnLoadingSpinner"
+                    ></span>
+                  </button>
+                </div>
+                <div class="invalid-feedback font-weight-bold">
+                  Please enter a valid number
+                </div>
+              </div>
+            </form>
+            <div id="specificFactContainer" class="card-body d-none">
+              <h6 id="specificFact" class="card-text"></h6>
+            </div>
+            <div
+              class="divider d-flex align-items-center text-center text-uppercase mb-3"
+            >
+              or
+            </div>
+            <button
+              class="btn btn-lg btn-dark"
+              type="button"
+              id="randomFactBtn"
+            >
+              Get Random Number Fact
+              <span
+                class="spinner-border spinner-border-sm align-baseline d-none"
+                role="status"
+                aria-hidden="true"
+                id="randomFactBtnLoadingSpinner"
+              ></span>
+            </button>
+            <div id="randomFactContainer" class="card-body d-none">
+              <h6 id="randomFact" class="card-text"></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
