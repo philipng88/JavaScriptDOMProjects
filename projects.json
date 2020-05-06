@@ -38,6 +38,7 @@
   { "directory": "numberFacts", "title": "Number Facts" },
   { "directory": "passMessage", "title": "Pass Message" },
   { "directory": "passwordGenerator", "title": "Password Generator" },
+  { "directory": "passwordStrengthMeter", "title": "Password Strength Meter"},
   { "directory": "patatapClone", "title": "Patatap Clone" },
   { "directory": "rockPaperScissors", "title": "Rock Paper Scissors Game" },
   { "directory": "sortableList", "title": "Sortable List" },

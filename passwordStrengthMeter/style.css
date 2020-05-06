@@ -1,0 +1,26 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: slategray;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.ui-container {
+  max-width: 64em;
+  margin: auto;
+}
+
+.nes-progress {
+  margin-bottom: 10px;
+}
+
+.nes-field input {
+  width: 100%;
+}
+
+.feedback {
+  margin-top: 25px;
+}
