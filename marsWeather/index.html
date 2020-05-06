@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mars Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="mars-current-weather">
+      <h1 class="main-title">latest weather at elysium planitia</h1>
+      <div class="date">
+        <h2 class="section-title section-title--date">
+          Sol <span id="currentSol"></span>
+        </h2>
+        <p class="date__day" id="currentDate"></p>
+      </div>
+      <div class="temp">
+        <h2 class="section-title">Temperature</h2>
+        <p class="reading">
+          High: <span id="currentTempHigh"></span>&deg;<span
+            class="temp-unit"
+          ></span>
+        </p>
+        <p class="reading">
+          Low: <span id="currentTempLow"></span>&deg;<span
+            class="temp-unit"
+          ></span>
+        </p>
+      </div>
+      <div class="wind">
+        <h2 class="section-title">Wind</h2>
+        <p class="reading">
+          <span id="windSpeed"></span>
+          <span id="speedUnit"></span>
+        </p>
+        <div class="wind__direction">
+          <p class="sr-only" id="windDirectionText"></p>
+          <div class="wind__arrow" id="windDirectionArrow"></div>
+        </div>
+      </div>
+      <div class="info">
+        <p>
+          InSight is taking daily weather measurements (temperature, wind,
+          pressure) on the surface of Mars at Elysium Planitia, a flat, smooth
+          plain near Mars’ equator.
+        </p>
+        <p>
+          This is only a part of InSight’s mission.
+          <a
+            href="https://mars.nasa.gov/insight/mission/overview"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Click here</a
+          >
+          to find out more.
+        </p>
+      </div>
+      <div class="unit">
+        <label for="cel">&deg;C</label>
+        <input type="radio" id="cel" class="unit-radio" name="unit" checked />
+        <button class="unit__toggle" id="unitToggle"></button>
+        <label for="fah">&deg;F</label>
+        <input type="radio" id="fah" class="unit-radio" name="unit" />
+      </div>
+    </main>
+    <div class="previous-weather" id="previousWeather">
+      <button
+        for="weather-toggle"
+        class="show-previous-weather"
+        id="previousWeatherToggle"
+      >
+        <span>&#8593;</span> <span class="sr-only">Show previous weather</span>
+      </button>
+      <h2 class="main-title previous-weather__title">Previous 7 days</h2>
+      <div class="previous-days" id="previousSolsContainer"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

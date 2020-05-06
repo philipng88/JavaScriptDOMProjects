@@ -29,6 +29,7 @@
   { "directory": "infiniteScrollPosts", "title": "Infinite Scroll Posts" },
   { "directory": "interactiveLandingPage", "title": "Interactive Landing Page"},
   { "directory": "lyricsSearch", "title": "Lyrics Search" },
+  { "directory": "marsWeather", "title": "Mars Weather" },
   { "directory": "mealFinder", "title": "Meal Finder" },
   { "directory": "movieSeatBooking", "title": "Movie Seat Booking" },
   { "directory": "musicPlayer", "title": "Music Player" },
