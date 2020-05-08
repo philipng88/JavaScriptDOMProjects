@@ -1,12 +1,21 @@
 [
   { "directory": "animatedCounter", "title": "Animated Counter" },
   { "directory": "bgImgSlider", "title": "Background Image Slider" },
-  { "directory": "bgImgSlider-v2", "title": "Background Image Slider (alternate)"},
-  { "directory": "bgImgSlider-v3", "title": "Background Image Slider (full screen)"},
+  {
+    "directory": "bgImgSlider-v2",
+    "title": "Background Image Slider (alternate)"
+  },
+  {
+    "directory": "bgImgSlider-v3",
+    "title": "Background Image Slider (full screen)"
+  },
   { "directory": "breakoutGame", "title": "Breakout Game" },
   { "directory": "breathingExercise", "title": "Breathing Exercise" },
   { "directory": "budgetCalculator", "title": "Budget Calculator" },
-  { "directory": "budgetCalculator-v2", "title": "Budget Calculator (alternate)"},
+  {
+    "directory": "budgetCalculator-v2",
+    "title": "Budget Calculator (alternate)"
+  },
   { "directory": "calculator", "title": "Calculator" },
   { "directory": "classicToDoList", "title": "Classic To-do List" },
   { "directory": "CoffeeShop", "title": "Coffee Shop" },
@@ -17,7 +26,10 @@
   { "directory": "customPDFViewer", "title": "Custom PDF Viewer" },
   { "directory": "dessertsCart", "title": "Desserts Cart" },
   { "directory": "digitalClock", "title": "Digital Clock" },
-  { "directory": "exchangeRateCalculator", "title": "Exchange Rate Calculator*"},
+  {
+    "directory": "exchangeRateCalculator",
+    "title": "Exchange Rate Calculator*"
+  },
   { "directory": "fancyForm", "title": "Fancy Form" },
   { "directory": "flashcards", "title": "Flash Cards" },
   { "directory": "flashcards-v2", "title": "Flash Cards (alternate)" },
@@ -27,7 +39,11 @@
   { "directory": "hexGenerator", "title": "Hex Generator" },
   { "directory": "imageGallery", "title": "Image Gallery" },
   { "directory": "infiniteScrollPosts", "title": "Infinite Scroll Posts*" },
-  { "directory": "interactiveLandingPage", "title": "Interactive Landing Page"},
+  {
+    "directory": "interactiveLandingPage",
+    "title": "Interactive Landing Page"
+  },
+  { "directory": "locationFinder", "title": "Location Finder*" },
   { "directory": "lyricsSearch", "title": "Lyrics Search*" },
   { "directory": "marsWeather", "title": "Mars Weather*" },
   { "directory": "mealFinder", "title": "Meal Finder*" },
@@ -38,13 +54,14 @@
   { "directory": "numberFacts", "title": "Number Facts*" },
   { "directory": "passMessage", "title": "Pass Message" },
   { "directory": "passwordGenerator", "title": "Password Generator" },
-  { "directory": "passwordStrengthMeter", "title": "Password Strength Meter"},
+  { "directory": "passwordStrengthMeter", "title": "Password Strength Meter" },
   { "directory": "patatapClone", "title": "Patatap Clone" },
   { "directory": "pokedex", "title": "Pokedex*" },
   { "directory": "rockPaperScissors", "title": "Rock Paper Scissors Game" },
   { "directory": "sortableList", "title": "Sortable List" },
   { "directory": "speechTextReader", "title": "Speech Text Reader" },
   { "directory": "starRatings", "title": "Star Ratings" },
+  { "directory": "stateCapitalLookup", "title": "State Capital Lookup" },
   { "directory": "tipForm", "title": "Tip Form" },
   { "directory": "typingGame", "title": "Typing Game" },
   { "directory": "weightConverter", "title": "Weight Converter" },
