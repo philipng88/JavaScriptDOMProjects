@@ -20,6 +20,7 @@
   { "directory": "classicToDoList", "title": "Classic To-do List" },
   { "directory": "CoffeeShop", "title": "Coffee Shop" },
   { "directory": "colorGame", "title": "Color Game" },
+  { "directory": "countdownTimer", "title": "Countdown Timer" },
   { "directory": "counter", "title": "Counter" },
   { "directory": "courseForm", "title": "Course Signup Form" },
   { "directory": "customVideoPlayer", "title": "Custom Video Player" },

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap"
+    />
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+  </head>
+  <body>
+    <div class="timer">
+      <div class="timer__controls">
+        <button type="button" data-time="20">20 Seconds</button>
+        <button type="button" data-time="300">Quick 5</button>
+        <button type="button" data-time="900">Quick 15</button>
+        <button type="button" data-time="1200">Snack 20</button>
+        <button type="button" data-time="3600">Lunch Break</button>
+        <form id="customForm">
+          <input
+            type="number"
+            id="customMinutesInput"
+            placeholder="Enter Minutes"
+            min="0"
+          />
+        </form>
+      </div>
+      <div class="display">
+        <h1 class="display__time-left" id="displayTimeLeft"></h1>
+        <p class="display__end-time" id="displayEndTime"></p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
