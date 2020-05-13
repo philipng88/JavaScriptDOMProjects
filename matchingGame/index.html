@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matching Game</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@blaze/css@9.2.0/dist/blaze/blaze.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="memory-game"></section>
+    <div class="start-modal">
+      <div role="dialog" class="o-modal o-modal--visible">
+        <div class="c-card">
+          <header class="c-card__header">
+            <h1 class="c-heading u-centered">Choose Card Deck Theme</h1>
+          </header>
+          <footer class="c-card__footer">
+            <div class="c-input-group">
+              <button class="c-button c-button--block" id="javascriptButton">
+                JavaScript
+              </button>
+              <button class="c-button c-button--block" id="phpButton">
+                PHP
+              </button>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="endgame-modal u-display-none">
+      <div aria-hidden class="c-overlay c-overlay--visible"></div>
+      <div role="dialog" class="o-modal o-modal--visible">
+        <div class="c-card">
+          <header class="c-card__header">
+            <h1 class="c-heading u-centered">You Won! Play Again?</h1>
+          </header>
+          <footer class="c-card__footer">
+            <div class="c-input-group">
+              <button
+                class="c-button c-button--block c-button--info"
+                id="yesButton"
+              >
+                Yes
+              </button>
+              <button
+                class="c-button c-button--block c-button--warning"
+                id="noButton"
+              >
+                No
+              </button>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

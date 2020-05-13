@@ -47,6 +47,7 @@
   { "directory": "locationFinder", "title": "Location Finder*" },
   { "directory": "lyricsSearch", "title": "Lyrics Search*" },
   { "directory": "marsWeather", "title": "Mars Weather*" },
+  { "directory": "matchingGame", "title": "Matching Game" },
   { "directory": "mealFinder", "title": "Meal Finder*" },
   { "directory": "movieSeatBooking", "title": "Movie Seat Booking" },
   { "directory": "musicPlayer", "title": "Music Player" },
