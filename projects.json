@@ -27,6 +27,7 @@
   { "directory": "customPDFViewer", "title": "Custom PDF Viewer" },
   { "directory": "dessertsCart", "title": "Desserts Cart" },
   { "directory": "digitalClock", "title": "Digital Clock" },
+  { "directory": "eventCountdown", "title": "Event Countdown" },
   {
     "directory": "exchangeRateCalculator",
     "title": "Exchange Rate Calculator*"
