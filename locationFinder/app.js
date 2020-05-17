@@ -68,3 +68,10 @@ const getLocationInfo = event => {
 };
 
 zipForm.addEventListener('submit', getLocationInfo);
+
+results.addEventListener('click', event => {
+  if (event.target.className === 'delete') {
+    event.target.parentElement.parentElement.remove();
+    zipInput.value = '';
+  }
+});
