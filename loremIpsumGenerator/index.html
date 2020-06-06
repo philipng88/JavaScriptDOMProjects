@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lorem Ipsum Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@blaze/css@9.2.0/dist/blaze/blaze.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="o-container o-container--medium">
+      <h1 class="c-heading u-super u-centered">Lorem Ipsum Generator</h1>
+      <form id="form">
+        <div class="c-input-group">
+          <div class="o-field">
+            <select id="structure" class="c-field">
+              <option value="paragraphs">PARAGRAPHS:</option>
+              <option value="sentences">SENTENCES:</option>
+              <option value="words">WORDS:</option>
+            </select>
+          </div>
+          <div class="o-field">
+            <input
+              type="number"
+              min="1"
+              value="5"
+              class="c-field"
+              id="amountInput"
+            />
+          </div>
+          <button type="submit" class="c-button c-button--info">
+            generate
+          </button>
+        </div>
+      </form>
+      <p id="loremTextDisplay"></p>
+      <div class="copy-button-wrapper">
+        <button
+          type="button"
+          class="c-button u-large u-display-none"
+          id="copyButton"
+        >
+          copy <i class="fas fa-copy"></i>
+        </button>
+      </div>
+    </div>
+    <div class="alert u-display-none" id="alert">copied text to clipboard!</div>
+    <script src="dist/bundle.min.js"></script>
+  </body>
+</html>
