@@ -1,0 +1,139 @@
+@spacing: 0.25rem;
+@radius: 0.5rem;
+@white-color: #fff;
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f1f5f8;
+  color: #102a42;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  @media screen and (min-width: 800px) {
+    font-size: 1rem;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h2,
+h4 {
+  letter-spacing: @spacing;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: 'Roboto', sans-serif;
+  @media screen and (min-width: 800px) {
+    line-height: 1;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  @media screen and (min-width: 800px) {
+    font-size: 2.5rem;
+  }
+}
+
+h4 {
+  font-size: 0.875rem;
+  @media screen and (min-width: 800px) {
+    font-size: 1rem;
+  }
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: #617d98;
+}
+
+.section {
+  padding: 5rem 0;
+  .title {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .about-center {
+    @media screen and (min-width: 992px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2rem;
+    }
+  }
+  &-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    @media screen and (min-width: 992px) {
+      width: 95vw;
+    }
+    .about-img {
+      margin-bottom: 2rem;
+      @media screen and (min-width: 992px) {
+        margin-bottom: 0;
+      }
+      img {
+        border-radius: @radius;
+        object-fit: cover;
+        height: 20rem;
+      }
+    }
+    .about {
+      background: @white-color;
+      border-radius: @radius;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      .btn-container {
+        border-top-left-radius: @radius;
+        border-top-right-radius: @radius;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        .tab-btn {
+          padding: 1rem 0;
+          border: none;
+          text-transform: capitalize;
+          font-size: 1rem;
+          display: block;
+          background: #dae2ec;
+          cursor: pointer;
+          transition: all 0.3s linear;
+          letter-spacing: @spacing;
+          &:nth-child(1) {
+            border-top-left-radius: @radius;
+          }
+          &:nth-child(3) {
+            border-top-right-radius: @radius;
+          }
+          &:hover:not(.active) {
+            background: #ebf7ff;
+            color: #49a6e9;
+          }
+        }
+        .tab-btn.active {
+          background: @white-color;
+        }
+      }
+      .about-content {
+        border-bottom-left-radius: @radius;
+        border-bottom-right-radius: @radius;
+        padding: 2rem 1.5rem;
+        .content {
+          display: none;
+        }
+        .content.active {
+          display: block;
+        }
+      }
+    }
+  }
+}

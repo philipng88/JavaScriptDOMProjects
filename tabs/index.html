@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Tabs</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet/less" href="style.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js"></script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="title">
+        <h2>about us</h2>
+      </div>
+      <div class="about-center section-center">
+        <article class="about-img">
+          <img src="./hero-bcg.jpeg" alt="hero background" />
+        </article>
+        <article class="about" id="aboutContainer">
+          <div class="btn-container">
+            <button class="tab-btn active" data-id="history">history</button>
+            <button class="tab-btn" data-id="vision">vision</button>
+            <button class="tab-btn" data-id="goals">goals</button>
+          </div>
+          <div class="about-content">
+            <div class="content active" id="history">
+              <h4>history</h4>
+              <p>
+                Ipsum anim est elit veniam labore in excepteur est enim dolor.
+                Officia excepteur officia mollit ipsum aliquip irure veniam ut
+                veniam qui cupidatat consectetur cillum. Mollit ad ea in labore
+                officia tempor velit labore in ex eu Lorem est. Nulla
+                reprehenderit ad consectetur irure aliqua occaecat. Sunt
+                cupidatat dolor ea mollit velit laboris incididunt adipisicing
+                laboris commodo nisi aute Lorem.
+              </p>
+            </div>
+            <div class="content" id="vision">
+              <h4>vision</h4>
+              <p>
+                Esse dolor consectetur laborum culpa sint consectetur deserunt
+                adipisicing commodo minim. Sit id enim et dolor officia officia
+                sunt ullamco quis proident. Laborum veniam pariatur anim do sit
+                veniam labore ex. Voluptate amet laboris minim aute do. Dolore
+                culpa exercitation ea culpa ad nulla laborum ad nulla sint
+                culpa.
+              </p>
+            </div>
+            <div class="content" id="goals">
+              <h4>goals</h4>
+              <p>
+                Aute aliquip nostrud in adipisicing dolor aute magna do
+                reprehenderit. Enim reprehenderit aute consequat mollit aliquip
+                aliquip ad. Ipsum in dolore pariatur minim excepteur. Aliqua
+                commodo veniam excepteur in consectetur ut nostrud minim. Irure
+                qui minim anim ea amet aliqua.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
