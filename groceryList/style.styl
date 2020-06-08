@@ -1,0 +1,169 @@
+transition = all 0.3s linear;
+spacing = 0.25rem;
+radius = 0.5rem;
+
+*,
+::after,
+::before 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+body 
+  font-family: 'Open Sans', sans-serif;
+  background: #f1f5f8;
+  color: #102a42;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  @media screen and (min-width: 800px)
+    font-size: 1rem;
+
+p 
+  margin-bottom: 1.25rem;
+  color: #617d98;
+
+.section-center
+  background: #fff;
+  border-radius: radius;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transition;
+  padding: 2rem;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 35rem;
+  margin-top: 8rem;
+  &:hover
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  @media screen and (min-width: 992px)
+    width: 95vw;
+
+  .grocery-form 
+    .alert 
+      margin-bottom: 1rem;
+      height: 1.25rem;
+      display: grid;
+      align-items: center;
+      text-align: center;
+      font-size: 0.7rem;
+      font-weight: bold;
+      border-radius: 0.25rem;
+      letter-spacing: spacing;
+      text-transform: capitalize;
+
+    .alert-danger 
+      color: #721c24;
+      background: #f8d7da;
+
+    .alert-success 
+      color: #155724;
+      background: #d4edda;
+
+    h3 
+      letter-spacing: spacing;
+      text-transform: capitalize;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+      font-family: 'Roboto', sans-serif;
+      color: #063251;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.25rem;
+      @media screen and (min-width: 800px)
+        font-size: 1.75rem;
+        line-height: 1;
+      
+    .form-control 
+      display: flex;
+      justify-content: center;
+      .grocery-input 
+        padding: 0.25rem;
+        padding-left: 1rem;
+        background: #f1f5f8;
+        border-top-left-radius: radius;
+        border-bottom-left-radius: radius;
+        border-color: transparent;
+        font-size: 1rem;
+        flex: 1 0 auto;
+        color: #617d98;
+        &::placeholder 
+          font-family: 'Open Sans', sans-serif;
+          color: #617d98;
+      .submit-btn 
+        background: #a5d5f8;
+        border-color: transparent;
+        flex: 0 0 5rem;
+        display: grid;
+        align-items: center;
+        padding: 0.25rem;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        border-top-right-radius: radius;
+        border-bottom-right-radius: radius;
+        cursor: pointer;
+        content: #49a6e9;
+        transition: transition;
+        font-size: 0.85rem;
+        &:hover 
+          background: #49a6e9;
+          color: #fff;
+
+  .grocery-container 
+    margin-top: 2rem;
+    transition: transition;
+    visibility: hidden;
+    .grocery-list
+      .grocery-item 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        transition: transition;
+        padding: 0.25rem 1rem;
+        border-radius: radius;
+        text-transform: capitalize;
+        &:hover 
+          color: #617d98;
+          background: #f1f5f8;
+        &:hover .title 
+          color: #617d98;
+        .title 
+          margin-bottom: 0;
+          color: #102a42;
+          letter-spacing: 2px;
+          transition: transition;
+        .btn-container
+          .edit-btn,
+          .delete-btn 
+            background: transparent;
+            border-color: transparent;
+            cursor: pointer;
+            font-size: 0.7rem;
+            margin: 0 0.15rem;
+            transition: transition;
+          .edit-btn 
+            color: #6be675;
+            &:hover 
+              color: #25bb32;
+          .delete-btn 
+            color: #e66b6b;
+            &:hover 
+              color: #bb2525;
+    .clear-btn 
+      text-transform: capitalize;
+      width: 10rem;
+      height: 1.5rem;
+      display: grid;
+      align-items: center;
+      background: transparent;
+      border-color: transparent;
+      color: #e66b6b;
+      margin: 0 auto;
+      font-size: 0.85rem;
+      letter-spacing: spacing;
+      cursor: pointer;
+      transition: transition;
+      margin-top: 1.25rem;
+      &:hover 
+        color: #bb2525;
+  .show-container 
+    visibility: visible;

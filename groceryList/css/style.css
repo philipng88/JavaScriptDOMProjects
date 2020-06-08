@@ -1,0 +1,189 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f1f5f8;
+  color: #102a42;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 1rem;
+  }
+}
+p {
+  margin-bottom: 1.25rem;
+  color: #617d98;
+}
+.section-center {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s linear;
+  padding: 2rem;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 35rem;
+  margin-top: 8rem;
+}
+.section-center:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+.section-center .grocery-form .alert {
+  margin-bottom: 1rem;
+  height: 1.25rem;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  letter-spacing: 0.25rem;
+  text-transform: capitalize;
+}
+.section-center .grocery-form .alert-danger {
+  color: #721c24;
+  background: #f8d7da;
+}
+.section-center .grocery-form .alert-success {
+  color: #155724;
+  background: #d4edda;
+}
+.section-center .grocery-form h3 {
+  letter-spacing: 0.25rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: 'Roboto', sans-serif;
+  color: #063251;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 800px) {
+  .section-center .grocery-form h3 {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+}
+.section-center .grocery-form .form-control {
+  display: flex;
+  justify-content: center;
+}
+.section-center .grocery-form .form-control .grocery-input {
+  padding: 0.25rem;
+  padding-left: 1rem;
+  background: #f1f5f8;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-color: transparent;
+  font-size: 1rem;
+  flex: 1 0 auto;
+  color: #617d98;
+}
+.section-center .grocery-form .form-control .grocery-input::placeholder {
+  font-family: 'Open Sans', sans-serif;
+  color: #617d98;
+}
+.section-center .grocery-form .form-control .submit-btn {
+  background: #a5d5f8;
+  border-color: transparent;
+  flex: 0 0 5rem;
+  display: grid;
+  align-items: center;
+  padding: 0.25rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  cursor: pointer;
+  content: #49a6e9;
+  transition: all 0.3s linear;
+  font-size: 0.85rem;
+}
+.section-center .grocery-form .form-control .submit-btn:hover {
+  background: #49a6e9;
+  color: #fff;
+}
+.section-center .grocery-container {
+  margin-top: 2rem;
+  transition: all 0.3s linear;
+  visibility: hidden;
+}
+.section-center .grocery-container .grocery-list .grocery-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s linear;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+}
+.section-center .grocery-container .grocery-list .grocery-item:hover {
+  color: #617d98;
+  background: #f1f5f8;
+}
+.section-center .grocery-container .grocery-list .grocery-item:hover .title {
+  color: #617d98;
+}
+.section-center .grocery-container .grocery-list .grocery-item .title {
+  margin-bottom: 0;
+  color: #102a42;
+  letter-spacing: 2px;
+  transition: all 0.3s linear;
+}
+.section-center .grocery-container .grocery-list .grocery-item .btn-container .edit-btn,
+.section-center .grocery-container .grocery-list .grocery-item .btn-container .delete-btn {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 0.7rem;
+  margin: 0 0.15rem;
+  transition: all 0.3s linear;
+}
+.section-center .grocery-container .grocery-list .grocery-item .btn-container .edit-btn {
+  color: #6be675;
+}
+.section-center .grocery-container .grocery-list .grocery-item .btn-container .edit-btn:hover {
+  color: #25bb32;
+}
+.section-center .grocery-container .grocery-list .grocery-item .btn-container .delete-btn {
+  color: #e66b6b;
+}
+.section-center .grocery-container .grocery-list .grocery-item .btn-container .delete-btn:hover {
+  color: #bb2525;
+}
+.section-center .grocery-container .clear-btn {
+  text-transform: capitalize;
+  width: 10rem;
+  height: 1.5rem;
+  display: grid;
+  align-items: center;
+  background: transparent;
+  border-color: transparent;
+  color: #e66b6b;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  letter-spacing: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  margin-top: 1.25rem;
+}
+.section-center .grocery-container .clear-btn:hover {
+  color: #bb2525;
+}
+.section-center .show-container {
+  visibility: visible;
+}
