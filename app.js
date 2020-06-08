@@ -1,4 +1,5 @@
 const projectsList = document.getElementById('projects');
+const projectCount = document.getElementById('projectCount');
 
 // Populate projects list
 const getProjects = async () => {
@@ -14,6 +15,8 @@ const getProjects = async () => {
       `
     )
   );
+  // show project count
+  projectCount.textContent = data.length || projectsList.childElementCount;
 };
 getProjects();
 
