@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "copy-text-to-clipboard": "^2.2.0",
+    "lorem-ipsum": "^2.0.3"
+  }
+}
