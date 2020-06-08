@@ -4,28 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link 
-      rel="stylesheet" 
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" 
-      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" 
-      crossorigin="anonymous" 
-    /> 
-    <link 
-      rel="stylesheet" 
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css" 
-      integrity="sha256-qS+snwBgqr+iFVpBB58C9UCxKFhyL03YHpZfdNUhSEw=" 
-      crossorigin="anonymous" 
-    /> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css"
+      integrity="sha256-aPeK/N8IHpHsvPBCf49iVKMdusfobKo2oxF8lRruWJg="
+      crossorigin="anonymous"
+    />
     <style>
-      input { margin-bottom: 0.75rem; }
+      .column-wrapper {
+        height: 100vh;
+        align-items: center;
+      }
     </style>
     <title>Pass Message</title>
   </head>
   <body class="has-background-info">
     <div class="container">
-      <div class="is-flex has-text-centered" style="height: 100vh; align-items: center;">
+      <div class="column-wrapper is-flex has-text-centered">
         <div class="column is-three-fifths is-offset-one-fifth">
-          <span class="box">
+          <div class="box">
             <h3 class="is-capitalized title is-3">
               enter a message you would like to pass
             </h3>
@@ -35,11 +38,13 @@
                 <input
                   type="text"
                   id="message"
-                  class="input is-fullwidth is-info"
-                  placeholder="type your message here..."
+                  class="input is-fullwidth is-info mb-3"
+                  placeholder="Type Your Message Here..."
                 />
               </div>
-              <input type="submit" id="submitBtn" class="button is-info is-rounded" />
+              <button type="submit" class="button is-info is-rounded mb-1">
+                Submit
+              </button>
             </form>
             <h4 class="is-capitalized title is-4">last message delivered:</h4>
             <h4 id="message-display" class="is-uppercase subtitle is-4"></h4>
