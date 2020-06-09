@@ -1,9 +1,9 @@
-@use 'variables';
+@use 'colors';
 @use 'mixins';
 
 .drink {
-  background: variables.$brown;
-  color: variables.$brightYellow;
+  background: colors.$brown;
+  color: colors.$brightYellow;
   text-transform: capitalize;
   &-form {
     text-align: center;
@@ -12,7 +12,7 @@
     justify-content: center;
     row-gap: 1.25rem;
     &__feedback {
-      border: 0.1rem solid variables.$brightYellow;
+      border: 0.1rem solid colors.$brightYellow;
       padding: 0.25rem;
       display: none;
     }
@@ -36,14 +36,14 @@
         width: 100%;
         @include mixins.inputStyles();
         &::placeholder {
-          color: variables.$darkBrown;
+          color: colors.$darkBrown;
         }
       }
     }
     .input-submit {
       @include mixins.inputStyles();
-      background: variables.$yellow;
-      color: variables.$black;
+      background: colors.$yellow;
+      color: colors.$black;
       transition: all 0.5s linear;
       -webkit-transition: all 0.5s linear;
       -moz-transition: all 0.5s linear;

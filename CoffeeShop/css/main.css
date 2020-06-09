@@ -175,9 +175,6 @@
   color: rgba(242, 180, 80, 0.9);
   padding-left: 1.5rem;
 }
-.nav__links .nav__single-link.nav__logo {
-  cursor: not-allowed;
-}
 .nav__links .nav__single-link.nav__logo:hover {
   background: #a9b2ac;
 }
@@ -189,6 +186,7 @@
   font-size: 3.5rem;
   color: #f2b450;
   cursor: pointer;
+  z-index: 99;
 }
 
 .video__switch-container {

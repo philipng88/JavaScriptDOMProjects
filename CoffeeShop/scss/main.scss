@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'colors';
 @use 'helpers';
 @use 'preloader';
 @use 'header';
@@ -23,5 +23,5 @@ body {
       rgba(255, 255, 255, 0.85)
     ),
     url('../img/bodyBcg.jpeg');
-  color: variables.$black;
+  color: colors.$black;
 }

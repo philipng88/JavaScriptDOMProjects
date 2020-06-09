@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'colors';
 
 .preloader {
   position: fixed;
@@ -6,7 +6,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: variables.$brightYellow;
+  background: colors.$brightYellow;
   z-index: 999;
   display: grid;
   justify-content: center;

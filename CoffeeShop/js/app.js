@@ -1,4 +1,4 @@
-import UI from './UI.js';
+import UI from './classes/UI.js';
 import {
   navBtn,
   videoSwitch,

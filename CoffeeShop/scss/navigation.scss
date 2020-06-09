@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'colors';
 
 .nav {
   position: fixed;
@@ -19,7 +19,7 @@
     .nav__single-link {
       display: block;
       text-decoration: none;
-      color: variables.$brown;
+      color: colors.$brown;
       font-size: 1.5rem;
       padding: 0.5rem 1rem;
       transition: all 0.5s ease-in-out;
@@ -28,15 +28,14 @@
       -ms-transition: all 0.5s ease-in-out;
       -o-transition: all 0.5s ease-in-out;
       &:hover {
-        background: variables.$brown;
+        background: colors.$brown;
         color: rgba(242, 180, 80, 0.9);
         padding-left: 1.5rem;
       }
     }
     .nav__single-link.nav__logo {
-      cursor: not-allowed;
       &:hover {
-        background: variables.$grey;
+        background: colors.$grey;
       }
     }
   }

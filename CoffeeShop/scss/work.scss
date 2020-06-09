@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'colors';
 
 .work-container {
   max-width: 90vw;
@@ -19,7 +19,7 @@
       'eight nine seven seven';
   }
   .work-item {
-    background: linear-gradient(variables.$yellow, variables.$yellow);
+    background: linear-gradient(colors.$yellow, colors.$yellow);
     overflow: hidden;
     position: relative;
     &__img {
@@ -35,7 +35,7 @@
     }
     &__icon {
       position: absolute;
-      color: variables.$brightYellow;
+      color: colors.$brightYellow;
       top: 50%;
       left: 50%;
       display: inline-block;
@@ -52,7 +52,7 @@
       -ms-transform: scale(0);
       -o-transform: scale(0);
       &:hover {
-        color: variables.$brown;
+        color: colors.$brown;
         cursor: pointer;
       }
     }
@@ -119,7 +119,7 @@
     height: 70vh;
     width: 80vw;
     border-radius: 0.4rem;
-    border: 0.5rem solid variables.$yellow;
+    border: 0.5rem solid colors.$yellow;
     @media screen and (min-width: 768px) {
       height: 80vh;
       width: 60vw;
@@ -128,7 +128,7 @@
   &__close {
     position: fixed;
     font-size: 3rem;
-    color: variables.$brightYellow;
+    color: colors.$brightYellow;
     top: 5%;
     right: 12%;
     transition: all 0.5s linear;

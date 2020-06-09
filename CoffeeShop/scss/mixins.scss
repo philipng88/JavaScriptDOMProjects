@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'colors';
 
 @mixin inputStyles {
   font-size: 1rem;
@@ -9,7 +9,7 @@
   -o-border-radius: 0.5rem;
   padding: 0.25rem 0.5rem;
   background: rgba(111, 87, 77, 0.6);
-  color: variables.$darkBrown;
+  color: colors.$darkBrown;
   border: none;
   outline: none;
 }

@@ -11,7 +11,7 @@ import {
   drinkCardList,
   workModal,
   workModalItem,
-} from './selectors.js';
+} from '../selectors.js';
 
 export default class UI {
   hidePreloader() {
