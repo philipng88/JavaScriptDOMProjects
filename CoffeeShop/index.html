@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="preloader">
+    <div class="preloader" id="preloader">
       <img src="img/preloader.gif" alt="Loading Icon" class="preloader__item" />
     </div>
     <header class="header" id="header">
@@ -44,16 +44,16 @@
         </div>
       </div>
       <article class="video__container">
-        <video class="video__item" autoplay muted loop>
+        <video id="videoItem" class="video__item" autoplay muted loop>
           <source src="video/coffee.mp4" type="video/mp4" />
           <source src="video/coffee.ogv" type="video/ogv" />
           <source src="video/coffee.webm" type="video/webm" />
         </video>
       </article>
-      <div class="navBtn">
+      <div class="navBtn" id="navBtn">
         <i class="fas fa-bars"></i>
       </div>
-      <nav class="nav">
+      <nav class="nav" id="nav">
         <ul class="nav__links">
           <li>
             <a href="#" class="nav__single-link nav__logo"
@@ -68,10 +68,10 @@
         </ul>
       </nav>
       <div class="video__switch-container">
-        <div class="video__switch">
+        <div class="video__switch" id="videoSwitch">
           <span>ON</span>
           <span>OFF</span>
-          <div class="video__switch-btn"></div>
+          <div class="video__switch-btn" id="videoSwitchBtn"></div>
         </div>
       </div>
     </header>
@@ -131,23 +131,38 @@
     </section>
     <section class="drink section-padding" id="drink">
       <div class="grid-container">
-        <form class="drink-form">
-          <p class="drink-form__feedback"></p>
+        <form class="drink-form" id="drinkForm">
+          <p class="drink-form__feedback" id="drinkFormFeedback"></p>
           <h3 class="drink-form__title bell-fonts">to get free drinks</h3>
           <div class="drink-form__input">
-            <input type="text" class="input-name" placeholder="First Name" />
+            <input
+              type="text"
+              class="input-name"
+              id="inputName"
+              placeholder="First Name"
+            />
           </div>
           <div class="drink-form__input">
-            <input type="text" class="input-lastname" placeholder="Last Name" />
+            <input
+              type="text"
+              class="input-lastname"
+              id="inputLastName"
+              placeholder="Last Name"
+            />
           </div>
           <div class="drink-form__input">
-            <input type="email" class="input-email" placeholder="Email" />
+            <input
+              type="email"
+              class="input-email"
+              id="inputEmail"
+              placeholder="Email"
+            />
           </div>
           <input type="submit" value="Sign Up" class="input-submit" />
         </form>
         <article class="drink-card">
           <h3 class="drink-card__title bell-fonts">lucky people:</h3>
-          <div class="drink-card__list"></div>
+          <div class="drink-card__list" id="drinkCardList"></div>
         </article>
       </div>
     </section>
@@ -212,9 +227,9 @@
           </a>
         </article>
       </div>
-      <div class="work-modal">
-        <div class="work-modal__item"></div>
-        <div class="work-modal__close">
+      <div class="work-modal" id="workModal">
+        <div class="work-modal__item" id="workModalItem"></div>
+        <div class="work-modal__close" id="workModalClose">
           <i class="fas fa-window-close"></i>
         </div>
       </div>
@@ -273,7 +288,9 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <script src="js/app.js"></script>
+    <script type="module" src="js/selectors.js"></script>
+    <script type="module" src="js/UI.js"></script>
+    <script type="module" src="js/app.js"></script>
     <script src="js/scroll.js"></script>
   </body>
 </html>
