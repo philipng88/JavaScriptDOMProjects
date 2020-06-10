@@ -1,21 +1,12 @@
 [
   { "directory": "animatedCounter", "title": "Animated Counter" },
   { "directory": "bgImgSlider", "title": "Background Image Slider" },
-  {
-    "directory": "bgImgSlider-v2",
-    "title": "Background Image Slider (alternate)"
-  },
-  {
-    "directory": "bgImgSlider-v3",
-    "title": "Background Image Slider (full screen)"
-  },
+  { "directory": "bgImgSlider-v2", "title": "Background Image Slider (alternate)"},
+  { "directory": "bgImgSlider-v3", "title": "Background Image Slider (full screen)"},
   { "directory": "breakoutGame", "title": "Breakout Game" },
   { "directory": "breathingExercise", "title": "Breathing Exercise" },
   { "directory": "budgetCalculator", "title": "Budget Calculator" },
-  {
-    "directory": "budgetCalculator-v2",
-    "title": "Budget Calculator (alternate)"
-  },
+  { "directory": "budgetCalculator-v2", "title": "Budget Calculator (alternate)"},
   { "directory": "calculator", "title": "Calculator" },
   { "directory": "classicToDoList", "title": "Classic To-do List" },
   { "directory": "CoffeeShop", "title": "Coffee Shop" },
@@ -28,23 +19,16 @@
   { "directory": "dessertsCart", "title": "Desserts Cart" },
   { "directory": "digitalClock", "title": "Digital Clock" },
   { "directory": "eventCountdown", "title": "Event Countdown" },
-  {
-    "directory": "exchangeRateCalculator",
-    "title": "Exchange Rate Calculator *"
-  },
+  { "directory": "exchangeRateCalculator", "title": "Exchange Rate Calculator *"},
   { "directory": "fancyForm", "title": "Fancy Form" },
   { "directory": "flashcards", "title": "Flash Cards" },
   { "directory": "flashcards-v2", "title": "Flash Cards (alternate)" },
   { "directory": "groceryList", "title": "Grocery List" },
-  { "directory": "groceryList-v2", "title": "Grocery List (alternate)" },
   { "directory": "hangmanGame", "title": "Hangman Game †" },
   { "directory": "hexGenerator", "title": "Hex Generator" },
   { "directory": "imageGallery", "title": "Image Gallery" },
   { "directory": "infiniteScrollPosts", "title": "Infinite Scroll Posts *" },
-  {
-    "directory": "interactiveLandingPage",
-    "title": "Interactive Landing Page"
-  },
+  { "directory": "interactiveLandingPage", "title": "Interactive Landing Page"},
   { "directory": "locationFinder", "title": "Location Finder *" },
   { "directory": "loremIpsumGenerator", "title": "Lorem Ipsum Generator †" },
   { "directory": "lyricsSearch", "title": "Lyrics Search *" },
