@@ -2,16 +2,21 @@ export default class UI {
   constructor() {
     this.preloader = document.getElementById('preloader');
     this.nav = document.getElementById('nav');
-    this.navIcon = document.getElementById('navBtn').firstElementChild;
+    this.navBtn = document.getElementById('navBtn');
+    this.navIcon = this.navBtn.firstElementChild;
+    this.videoSwitch = document.getElementById('videoSwitch');
     this.videoSwitchBtn = document.getElementById('videoSwitchBtn');
     this.videoItem = document.getElementById('videoItem');
     this.inputName = document.getElementById('inputName');
     this.inputLastName = document.getElementById('inputLastName');
     this.inputEmail = document.getElementById('inputEmail');
+    this.drinkForm = document.getElementById('drinkForm');
     this.drinkFormFeedback = document.getElementById('drinkFormFeedback');
     this.drinkCardList = document.getElementById('drinkCardList');
     this.workModal = document.getElementById('workModal');
     this.workModalItem = document.getElementById('workModalItem');
+    this.workModalClose = document.getElementById('workModalClose');
+    this.workItemIcons = document.querySelectorAll('.work-item__icon');
   }
 
   hidePreloader() {
