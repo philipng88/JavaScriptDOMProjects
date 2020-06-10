@@ -1,0 +1,19 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2020": true
+  },
+  "extends": ["airbnb-base", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 11
+  },
+  "rules": {
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-return-assign": "warn",
+    "no-alert": "warn",
+    "no-lonely-if": "warn",
+    "func-names": "warn"
+  }
+}
