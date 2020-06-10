@@ -1,10 +1,13 @@
 const balance = document.getElementById('balance');
-const money_plus = document.getElementById('money-plus');
-const money_minus = document.getElementById('money-minus');
+const moneyPlus = document.getElementById('money-plus');
+const moneyMinus = document.getElementById('money-minus');
 const list = document.getElementById('list');
 const form = document.getElementById('form');
 const title = document.getElementById('title');
 const amount = document.getElementById('amount');
+const warning = document.getElementById('warning');
+const warningClose = document.getElementById('warningClose');
+const warningText = document.getElementById('warningText');
 
 let transactions =
   localStorage.getItem('transactions') !== null
@@ -34,8 +37,8 @@ const updateValues = () => {
     amounts.filter(item => item < 0).reduce((acc, item) => acc + item, 0) * -1
   ).toFixed(2);
   balance.innerText = `$${total}`;
-  money_plus.innerText = `$${income}`;
-  money_minus.innerText = `$${expense}`;
+  moneyPlus.innerText = `$${income}`;
+  moneyMinus.innerText = `$${expense}`;
 };
 
 const updateLocalStorage = () =>
@@ -44,12 +47,13 @@ const updateLocalStorage = () =>
 const addTransaction = event => {
   event.preventDefault();
   if (title.value.trim() === '' || amount.value.trim() === '') {
-    alert('Please enter a title and an amount');
+    warning.classList.remove('hide');
+    warningText.innerText = 'Please enter a title AND an amount';
   } else {
     const transaction = {
-      id: Math.floor(Math.random() * 100000000),
+      id: new Date().getTime(),
       title: title.value,
-      amount: +amount.value
+      amount: +amount.value,
     };
     transactions.push(transaction);
     addTransactionDOM(transaction);
@@ -66,14 +70,19 @@ const init = () => {
   updateValues();
 };
 
+// eslint-disable-next-line no-unused-vars
 const removeTransaction = id => {
-  if (window.confirm('Are you sure you want to remove this transaction?')) {
-    transactions = transactions.filter(transaction => transaction.id !== id);
-    updateLocalStorage();
-    init();
-  }
+  transactions = transactions.filter(transaction => transaction.id !== id);
+  updateLocalStorage();
+  init();
+};
+
+const closeWarning = () => {
+  warning.classList.add('hide');
+  warningText.innerText = '';
 };
 
 init();
 
 form.addEventListener('submit', addTransaction);
+warningClose.addEventListener('click', closeWarning);

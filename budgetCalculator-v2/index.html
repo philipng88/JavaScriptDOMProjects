@@ -30,13 +30,13 @@
       <h3>Add new transaction</h3>
       <form id="form">
         <div class="form-control">
-          <label for="title">Title</label>
+          <label for="title" style="font-weight: bold;">Title</label>
           <input type="text" id="title" placeholder="e.g., Rent" />
         </div>
         <div class="form-control">
           <label for="amount"
-            >Amount (enter a negative amount for an expense or a postive amount
-            for income)</label
+            ><strong>Amount</strong> (enter a negative amount for an expense or
+            a postive amount for income)</label
           >
           <input
             type="number"
@@ -44,6 +44,10 @@
             step="0.01"
             placeholder="Enter amount..."
           />
+        </div>
+        <div class="warning hide" id="warning">
+          <span class="warning-close" id="warningClose">&times;</span>
+          <span id="warningText"></span>
         </div>
         <button class="btn">Add transaction</button>
       </form>
