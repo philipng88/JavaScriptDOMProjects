@@ -1,72 +1,72 @@
-import {
-  preloader,
-  nav,
-  navIcon,
-  videoSwitchBtn,
-  videoItem,
-  drinkFormFeedback,
-  inputName,
-  inputLastName,
-  inputEmail,
-  drinkCardList,
-  workModal,
-  workModalItem,
-} from '../selectors.js';
-
 export default class UI {
+  constructor() {
+    this.preloader = document.getElementById('preloader');
+    this.nav = document.getElementById('nav');
+    this.navIcon = document.getElementById('navBtn').firstElementChild;
+    this.videoSwitchBtn = document.getElementById('videoSwitchBtn');
+    this.videoItem = document.getElementById('videoItem');
+    this.inputName = document.getElementById('inputName');
+    this.inputLastName = document.getElementById('inputLastName');
+    this.inputEmail = document.getElementById('inputEmail');
+    this.drinkFormFeedback = document.getElementById('drinkFormFeedback');
+    this.drinkCardList = document.getElementById('drinkCardList');
+    this.workModal = document.getElementById('workModal');
+    this.workModalItem = document.getElementById('workModalItem');
+  }
+
   hidePreloader() {
-    return (preloader.style.display = 'none');
+    this.preloader.style.display = 'none';
   }
 
   toggleNav() {
-    return nav.classList.toggle('nav--show');
+    this.nav.classList.toggle('nav--show');
   }
 
   toggleNavIcon() {
-    if (navIcon.classList.contains('fa-bars')) {
-      navIcon.classList.remove('fa-bars');
-      navIcon.classList.add('fa-times');
-    } else if (navIcon.classList.contains('fa-times')) {
-      navIcon.classList.remove('fa-times');
-      navIcon.classList.add('fa-bars');
+    if (this.navIcon.classList.contains('fa-bars')) {
+      this.navIcon.classList.remove('fa-bars');
+      this.navIcon.classList.add('fa-times');
+    } else if (this.navIcon.classList.contains('fa-times')) {
+      this.navIcon.classList.remove('fa-times');
+      this.navIcon.classList.add('fa-bars');
     }
   }
 
   toggleVideo() {
-    if (videoSwitchBtn.classList.contains('btnSlide')) {
-      videoSwitchBtn.classList.remove('btnSlide');
-      videoItem.play();
+    if (this.videoSwitchBtn.classList.contains('btnSlide')) {
+      this.videoSwitchBtn.classList.remove('btnSlide');
+      this.videoItem.play();
     } else {
-      videoSwitchBtn.classList.add('btnSlide');
-      videoItem.pause();
+      this.videoSwitchBtn.classList.add('btnSlide');
+      this.videoItem.pause();
     }
   }
 
   hasEmptyValues() {
     return (
-      inputName.value.trim() === '' ||
-      inputLastName.value.trim() === '' ||
-      inputEmail.value.trim() === ''
+      this.inputName.value.trim() === '' ||
+      this.inputLastName.value.trim() === '' ||
+      this.inputEmail.value.trim() === ''
     );
   }
 
   showFeedback(message, type) {
-    drinkFormFeedback.classList.add(type);
-    drinkFormFeedback.innerText = message;
+    this.drinkFormFeedback.classList.add(type);
+    this.drinkFormFeedback.innerText = message;
     setTimeout(() => {
-      drinkFormFeedback.classList.remove(type);
-      drinkFormFeedback.innerText = '';
+      this.drinkFormFeedback.classList.remove(type);
+      this.drinkFormFeedback.innerText = '';
     }, 3000);
   }
 
   clearFields() {
-    inputName.value = '';
-    inputLastName.value = '';
-    inputEmail.value = '';
+    this.inputName.value = '';
+    this.inputLastName.value = '';
+    this.inputEmail.value = '';
   }
 
   addCustomer({ name, lastName }) {
-    drinkCardList.insertAdjacentHTML(
+    this.drinkCardList.insertAdjacentHTML(
       'afterbegin',
       `
         <div class="person">
@@ -85,13 +85,14 @@ export default class UI {
   showModal(event) {
     event.preventDefault();
     if (event.target.parentElement.classList.contains('work-item__icon')) {
+      // eslint-disable-next-line prefer-destructuring
       const id = event.target.parentElement.dataset.id;
-      workModal.style.display = 'grid';
-      workModalItem.style.backgroundImage = `url(img/work-${id}.jpeg)`;
+      this.workModal.style.display = 'grid';
+      this.workModalItem.style.backgroundImage = `url(img/work-${id}.jpeg)`;
     }
   }
 
   closeModal() {
-    return (workModal.style.display = 'none');
+    this.workModal.style.display = 'none';
   }
 }

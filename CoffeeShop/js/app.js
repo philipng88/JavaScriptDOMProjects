@@ -1,13 +1,13 @@
+/* eslint-disable import/extensions */
 import UI from './classes/UI.js';
-import {
-  navBtn,
-  videoSwitch,
-  drinkForm,
-  inputName,
-  inputLastName,
-  workItemIcons,
-  workModalClose,
-} from './selectors.js';
+
+const navBtn = document.getElementById('navBtn');
+const videoSwitch = document.getElementById('videoSwitch');
+const drinkForm = document.getElementById('drinkForm');
+const inputName = document.getElementById('inputName');
+const inputLastName = document.getElementById('inputLastName');
+const workItemIcons = document.querySelectorAll('.work-item__icon');
+const workModalClose = document.getElementById('workModalClose');
 
 (() => {
   const ui = new UI();
