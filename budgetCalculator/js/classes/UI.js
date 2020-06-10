@@ -1,7 +1,10 @@
-class UI {
+export default class UI {
   constructor() {
     this.budgetFeedback = document.querySelector('.budget-feedback');
     this.expenseFeedback = document.querySelector('.expense-feedback');
+    this.expenseItemsFeedback = document.querySelector(
+      '.expense-items-feedback'
+    );
     this.budgetForm = document.getElementById('budget-form');
     this.budgetInput = document.getElementById('budget-input');
     this.budgetAmount = document.getElementById('budget-amount');
@@ -58,13 +61,13 @@ class UI {
       amountInputIsValid &&
       amountInputIsValid.length === 1
     ) {
-      let amount = +amountValue;
+      const amount = +amountValue;
       this.expenseInput.value = '';
       this.amountInput.value = '';
-      let expense = {
+      const expense = {
         id: this.itemID,
         title: expenseValue,
-        amount
+        amount,
       };
       this.itemID++;
       this.itemList.push(expense);
@@ -103,8 +106,8 @@ class UI {
   }
 
   editExpense(element) {
-    let id = +element.children[2].children[0].dataset.id;
-    let expense = this.itemList.filter(item => item.id === id);
+    const id = +element.children[2].children[0].dataset.id;
+    const expense = this.itemList.filter(item => item.id === id);
 
     element.parentElement.removeChild(element);
     this.expenseInput.value = expense[0].title;
@@ -114,8 +117,7 @@ class UI {
   }
 
   deleteExpense(element) {
-    let id = +element.children[2].children[0].dataset.id;
-
+    const id = +element.children[2].children[0].dataset.id;
     element.parentElement.removeChild(element);
     this.itemList = this.itemList.filter(item => item.id !== id);
     this.showBalance();
@@ -128,8 +130,14 @@ class UI {
       this.balanceAmount.innerText === '0.00' &&
       this.expenseTable.children.length === 0
     ) {
-      alert('There is no data to clear');
+      this.expenseItemsFeedback.classList.remove('d-none');
+      this.expenseItemsFeedback.innerText = 'There is no data to clear';
+      setTimeout(() => {
+        this.expenseItemsFeedback.classList.add('d-none');
+        this.expenseItemsFeedback.innerText = '';
+      }, 2000);
     } else {
+      // eslint-disable-next-line no-lonely-if, no-alert
       if (window.confirm('Are you sure you wish to clear all the data?')) {
         this.budgetAmount.innerText = '0.00';
         this.itemList = [];
@@ -152,27 +160,3 @@ class UI {
     return total.toFixed(2);
   }
 }
-
-const eventListeners = () => {
-  const budgetForm = document.getElementById('budget-form');
-  const expenseForm = document.getElementById('expense-form');
-  const expenseTable = document.getElementById('expense-table');
-  const clearDataBtn = document.getElementById('clear-data-btn');
-  const ui = new UI();
-  budgetForm.addEventListener('submit', event => {
-    event.preventDefault();
-    ui.submitBudgetForm();
-  });
-  expenseForm.addEventListener('submit', event => {
-    event.preventDefault();
-    ui.submitExpenseForm();
-  });
-  expenseTable.addEventListener('click', event => {
-    if (event.target.classList.contains('edit-expense-btn'))
-      ui.editExpense(event.target.parentElement.parentElement);
-    if (event.target.classList.contains('delete-expense-btn'))
-      ui.deleteExpense(event.target.parentElement.parentElement);
-  });
-  clearDataBtn.addEventListener('click', () => ui.clearData());
-};
-document.addEventListener('DOMContentLoaded', () => eventListeners());
