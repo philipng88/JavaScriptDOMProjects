@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 const currentSol = document.getElementById('currentSol');
 const currentDate = document.getElementById('currentDate');
 const currentTempHigh = document.getElementById('currentTempHigh');
@@ -19,8 +20,8 @@ const getWeather = () =>
   fetch(API_URL)
     .then(res => res.json())
     .then(data => {
-      const { sol_keys, validity_checks, ...solData } = data;
-      return Object.entries(solData).map(([sol, data]) => {
+      const { sol_keys, validity_checks, ...solsData } = data;
+      return Object.entries(solsData).map(([sol, solData]) => {
         const {
           AT: { mx: maxTemp, mn: minTemp },
           HWS: { av: windSpeed },
@@ -31,7 +32,7 @@ const getWeather = () =>
             },
           },
           First_UTC,
-        } = data;
+        } = solData;
         return {
           sol,
           maxTemp,
@@ -46,6 +47,8 @@ const getWeather = () =>
 
 const displayDate = date =>
   date.toLocaleDateString(undefined, { day: 'numeric', month: 'long' });
+
+const isMetric = () => metricRadio.checked;
 
 const displayTemperature = temperature => {
   let returnTemp = temperature;
@@ -63,10 +66,10 @@ const updateUnits = () => {
   const speedUnit = document.getElementById('speedUnit');
   const tempUnits = document.querySelectorAll('.temp-unit');
   speedUnit.innerText = isMetric() ? 'kph' : 'mph';
-  tempUnits.forEach(unit => (unit.innerText = isMetric() ? 'C' : 'F'));
+  tempUnits.forEach(unit => {
+    unit.innerText = isMetric() ? 'C' : 'F';
+  });
 };
-
-const isMetric = () => metricRadio.checked;
 
 const displayCurrentSol = sols => {
   const {
@@ -121,7 +124,7 @@ getWeather().then(sols => {
   updateUI(sols);
 
   unitToggle.addEventListener('click', () => {
-    let metricUnits = !isMetric();
+    const metricUnits = !isMetric();
     metricRadio.checked = metricUnits;
     imperialRadio.checked = !metricUnits;
     updateUI(sols);

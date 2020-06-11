@@ -76,12 +76,10 @@
       items.forEach(item => {
         if (value === 'all') {
           item.style.display = 'block';
+        } else if (item.classList.contains(value)) {
+          item.style.display = 'block';
         } else {
-          if (item.classList.contains(value)) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
+          item.style.display = 'none';
         }
       });
     });
@@ -139,16 +137,24 @@
     item.style.backgroundImage = `url(${imageList[counter]})`;
   });
 
-  closeIcon.addEventListener('click', () => (container.style.display = 'none'));
+  closeIcon.addEventListener('click', () => {
+    container.style.display = 'none';
+  });
 })();
 
 // scroll to top button
 const scrollTopBtn = document.getElementById('scrollTopBtn');
+const scrollFunction = () => {
+  if (
+    document.body.scrollTop > 250 ||
+    document.documentElement.scrollTop > 250
+  ) {
+    scrollTopBtn.style.display = 'block';
+  } else {
+    scrollTopBtn.style.display = 'none';
+  }
+};
 window.onscroll = () => scrollFunction();
-scrollFunction = () =>
-  document.body.scrollTop > 250 || document.documentElement.scrollTop > 250
-    ? (scrollTopBtn.style.display = 'block')
-    : (scrollTopBtn.style.display = 'none');
 scrollTopBtn.addEventListener('click', () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;

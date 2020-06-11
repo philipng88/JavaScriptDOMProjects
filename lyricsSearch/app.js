@@ -53,6 +53,7 @@ const searchSongs = async searchValue => {
   showData(data);
 };
 
+// eslint-disable-next-line no-unused-vars
 const getMoreSongs = async url => {
   const res = await fetch(`https://cors-anywhere.herokuapp.com/${url}`);
   const data = await res.json();
@@ -77,7 +78,11 @@ const getLyrics = async (artist, songTitle) => {
 form.addEventListener('submit', event => {
   event.preventDefault();
   const searchValue = search.value.trim();
-  searchValue ? searchSongs(searchValue) : alert('Please enter a search value');
+  if (searchValue) {
+    searchSongs(searchValue);
+  } else {
+    alert('Please enter a search value');
+  }
 });
 
 result.addEventListener('click', event => {

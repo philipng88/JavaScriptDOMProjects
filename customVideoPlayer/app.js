@@ -5,13 +5,17 @@ const progress = document.getElementById('progress');
 const timestamp = document.getElementById('timestamp');
 
 const toggleVideoStatus = () => {
-  video.paused ? video.play() : video.pause();
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
 };
 
 const updatePlayIcon = () => {
-  video.paused
-    ? (play.innerHTML = "<i class='fa fa-play fa-2x'></i>")
-    : (play.innerHTML = "<i class='fa fa-pause fa-2x'></i>");
+  play.innerHTML = `<i class='fas fa-${
+    video.paused ? 'play' : 'pause'
+  } fa-2x'></i>`;
 };
 
 const updateProgress = () => {

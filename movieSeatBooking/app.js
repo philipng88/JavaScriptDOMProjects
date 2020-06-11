@@ -4,8 +4,6 @@ const count = document.getElementById('count');
 const total = document.getElementById('total');
 const movieSelect = document.getElementById('movie');
 
-populateUI();
-
 let ticketPrice = +movieSelect.value;
 
 function setMovieData(movieIndex, moviePrice) {
@@ -22,9 +20,7 @@ function updateSelectedCount() {
   localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
   count.innerText = selectedSeatsCount;
   total.innerText = selectedSeatsCount * ticketPrice;
-  selectedSeatsCount === 1
-    ? (seatsText.innerText = 'seat')
-    : (seatsText.innerText = 'seats');
+  seatsText.innerText = selectedSeatsCount === 1 ? 'seat' : 'seats';
 }
 
 function populateUI() {
@@ -55,4 +51,5 @@ container.addEventListener('click', event => {
   }
 });
 
+populateUI();
 updateSelectedCount();

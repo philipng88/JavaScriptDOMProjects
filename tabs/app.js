@@ -3,6 +3,7 @@ const aboutContainer = document.getElementById('aboutContainer');
 const contentWrappers = document.querySelectorAll('.content');
 
 aboutContainer.addEventListener('click', event => {
+  // eslint-disable-next-line prefer-destructuring
   const id = event.target.dataset.id;
   if (id) {
     tabButtons.forEach(tabButton => {

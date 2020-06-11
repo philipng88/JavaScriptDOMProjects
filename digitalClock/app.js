@@ -1,11 +1,15 @@
 const convertFormat = time => {
   let format;
-  time >= 12 ? (format = 'PM') : (format = 'AM');
+  if (time >= 12) {
+    format = 'PM';
+  } else {
+    format = 'AM';
+  }
   return format;
 };
 
 const checkTime = time => {
-  if (time > 12) time = time - 12;
+  if (time > 12) time -= 12;
   if (time === 0) time = 12;
   return time;
 };
@@ -16,7 +20,7 @@ const addZero = time => {
 };
 
 const showTime24 = () => {
-  let date = new Date();
+  const date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
@@ -29,11 +33,11 @@ const showTime24 = () => {
 };
 
 const showTime12 = () => {
-  let date = new Date();
+  const date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
-  let formatHours = convertFormat(hours);
+  const formatHours = convertFormat(hours);
   hours = checkTime(hours);
   hours = addZero(hours);
   minutes = addZero(minutes);

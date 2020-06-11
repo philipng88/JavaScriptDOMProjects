@@ -34,9 +34,12 @@ const getVoices = () => {
   });
 };
 
-const setVoice = event =>
-  (message.voice = voices.find(voice => voice.name === event.target.value));
-const setTextMessage = text => (message.text = text);
+const setVoice = event => {
+  message.voice = voices.find(voice => voice.name === event.target.value);
+};
+const setTextMessage = text => {
+  message.text = text;
+};
 const speakText = () => speechSynthesis.speak(message);
 
 feelings.forEach(feeling =>

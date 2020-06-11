@@ -48,20 +48,19 @@ const getLocationInfo = event => {
   const zip = zipInput.value;
   fetch(`https://api.zippopotam.us/us/${zip}`)
     .then(res => {
-      if (res.status == 200) {
+      if (res.status === 200) {
         showIcon('check');
         return res.json();
-      } else {
-        results.innerHTML = `
+      }
+      results.innerHTML = `
           <article class='message is-danger'>
             <div class='message-body'>
               Invalid Zipcode. Please try again.
             </div>  
           </article>
         `;
-        showIcon('times');
-        throw Error(res.statusText);
-      }
+      showIcon('times');
+      throw Error(res.statusText);
     })
     .then(data => showResults(data))
     .catch(err => console.log(err));

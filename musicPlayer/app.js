@@ -56,15 +56,19 @@ const updateProgress = event => {
 const setProgress = event => {
   const width = progressContainer.clientWidth;
   const clickX = event.offsetX;
-  const duration = audio.duration;
-  audio.currentTime = (clickX / width) * duration;
+  audio.currentTime = (clickX / width) * audio.duration;
 };
 
 loadSong(songs[songIndex]);
 
 playBtn.addEventListener('click', () => {
-  musicContainer.classList.contains('play') ? pauseSong() : playSong();
+  if (musicContainer.classList.contains('play')) {
+    pauseSong();
+  } else {
+    playSong();
+  }
 });
+
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 audio.addEventListener('timeupdate', updateProgress);

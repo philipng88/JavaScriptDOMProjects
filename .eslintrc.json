@@ -12,7 +12,7 @@
     "no-param-reassign": "off",
     "no-plusplus": "off",
     "no-return-assign": "warn",
-    "no-alert": "warn",
+    "no-alert": "off",
     "no-lonely-if": "warn",
     "func-names": "warn"
   }

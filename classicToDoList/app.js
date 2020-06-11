@@ -41,22 +41,21 @@ const addItem = value => {
 const handleItem = textValue => {
   const items = itemList.querySelectorAll('.item');
   items.forEach(item => {
-    if (item.querySelector('.item-name').textContent === textValue) {
-      item
-        .querySelector('.complete-item')
-        .addEventListener('click', function() {
-          item.querySelector('.item-name').classList.toggle('completed');
-          this.classList.toggle('visibility');
-        });
+    const itemNameElement = item.querySelector('.item-name');
+    if (itemNameElement.textContent === textValue) {
+      item.querySelector('.complete-item').addEventListener('click', () => {
+        itemNameElement.classList.toggle('completed');
+        item.classList.toggle('visibility');
+      });
       item.querySelector('.edit-item').addEventListener('click', () => {
         itemInput.value = textValue;
         itemList.removeChild(item);
-        itemData = itemData.filter(item => item !== textValue);
+        itemData = itemData.filter(i => i !== textValue);
         localStorage.setItem('list', JSON.stringify(itemData));
       });
       item.querySelector('.delete-item').addEventListener('click', () => {
         itemList.removeChild(item);
-        itemData = itemData.filter(item => item !== textValue);
+        itemData = itemData.filter(i => i !== textValue);
         localStorage.setItem('list', JSON.stringify(itemData));
         feedback('success', 'Item removed');
       });

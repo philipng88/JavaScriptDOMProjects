@@ -15,8 +15,13 @@ toggle.addEventListener('click', () => {
   document.body.classList.toggle('show-nav');
 });
 
-open.addEventListener('click', () => (modal.style.display = 'block'));
-close.addEventListener('click', () => (modal.style.display = 'none'));
+open.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
+
+close.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
 
 // Form Validation
 const form = document.querySelector('.modal-form');
@@ -38,16 +43,21 @@ const showSuccess = input => {
 };
 
 const checkEmail = input => {
+  // eslint-disable-next-line no-useless-escape
   const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  regex.test(input.value)
-    ? showSuccess(input)
-    : showError(input, 'Invalid Email');
+  if (regex.test(input.value)) {
+    showSuccess(input);
+  } else {
+    showError(input, 'Invalid Email');
+  }
 };
 
 const checkpasswordLength = (input, min) => {
-  input.value.length < min
-    ? showError(input, `Password must be at least ${min} characters`)
-    : showSuccess(input);
+  if (input.value.length < min) {
+    showError(input, `Password must be at least ${min} characters`);
+  } else {
+    showSuccess(input);
+  }
 };
 
 const checkPasswordsMatch = (input1, input2) => {
@@ -64,12 +74,17 @@ const resetForm = arr => {
 
 form.addEventListener('submit', event => {
   event.preventDefault();
-  name.value.trim() === ''
-    ? showError(name, 'Please provide your name')
-    : showSuccess(name);
-  password2.value === ''
-    ? showError(password2, 'Please confirm your password')
-    : showSuccess(password2);
+  if (name.value.trim() === '') {
+    showError(name, 'Please provide your name');
+  } else {
+    showSuccess(name);
+  }
+
+  if (password2.value === '') {
+    showError(password2, 'Please confirm your password');
+  } else {
+    showSuccess(password2);
+  }
   checkpasswordLength(password, 6);
   checkEmail(email);
   checkPasswordsMatch(password, password2);

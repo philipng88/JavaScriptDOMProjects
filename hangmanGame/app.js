@@ -46,9 +46,12 @@ const updateWrongLettersEl = () => {
     ${wrongLetters.map(letter => `<span> ${letter}</span>`)}
   `;
   figureParts.forEach((part, index) => {
-    index < wrongLetters.length
-      ? (part.style.display = 'block')
-      : (part.style.display = 'none');
+    if (index < wrongLetters.length) {
+      part.style.display = 'block';
+    } else {
+      part.style.display = 'none';
+    }
+
     if (wrongLetters.length === figureParts.length)
       handleGameFinish(
         `Sorry, you lost 🙁`,
@@ -76,13 +79,11 @@ window.addEventListener('keydown', event => {
         } else {
           showNotification();
         }
+      } else if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
+        updateWrongLettersEl();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
-          updateWrongLettersEl();
-        } else {
-          showNotification();
-        }
+        showNotification();
       }
     }
   }

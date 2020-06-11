@@ -32,8 +32,13 @@ const renderPage = num => {
   });
 };
 
-const queueRenderPage = num =>
-  pageIsRendering ? (pageNumIsPending = num) : renderPage(num);
+const queueRenderPage = num => {
+  if (pageIsRendering) {
+    pageNumIsPending = num;
+  } else {
+    renderPage(num);
+  }
+};
 
 const showPrevPage = () => {
   if (pageNum <= 1) return;
@@ -47,6 +52,7 @@ const showNextPage = () => {
   queueRenderPage(pageNum);
 };
 
+// eslint-disable-next-line no-undef
 pdfjsLib
   .getDocument(url)
   .promise.then(pdfDoc_ => {

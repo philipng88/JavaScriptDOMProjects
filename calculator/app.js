@@ -5,7 +5,7 @@ const calculator = {
   displayValue: '0',
   firstOperand: null,
   waitingForSecondOperand: false,
-  operator: null
+  operator: null,
 };
 
 const performCalculation = {
@@ -13,7 +13,7 @@ const performCalculation = {
   '*': (firstOperand, secondOperand) => firstOperand * secondOperand,
   '+': (firstOperand, secondOperand) => firstOperand + secondOperand,
   '-': (firstOperand, secondOperand) => firstOperand - secondOperand,
-  '=': (firstOperand, secondOperand) => secondOperand
+  '=': (firstOperand, secondOperand) => secondOperand,
 };
 
 const inputDigit = digit => {
@@ -59,8 +59,9 @@ const resetCalculator = () => {
   calculator.operator = null;
 };
 
-const updateDisplay = () =>
-  (calculatorDisplay.innerText = calculator.displayValue);
+const updateDisplay = () => {
+  calculatorDisplay.innerText = calculator.displayValue;
+};
 
 keys.addEventListener('click', event => {
   const { target } = event;

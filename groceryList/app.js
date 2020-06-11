@@ -32,6 +32,56 @@ const getLocalStorage = () =>
     ? JSON.parse(localStorage.getItem(localStorageName))
     : [];
 
+const handleLocalStorageAction = (actionType, id, value) => {
+  let items = getLocalStorage();
+  switch (actionType) {
+    case 'add':
+      items.push({ id, value });
+      break;
+    case 'edit':
+      items = items.map(item => {
+        if (item.id === id) item.value = value;
+        return item;
+      });
+      break;
+    case 'remove':
+      // eslint-disable-next-line consistent-return, array-callback-return
+      items = items.filter(item => {
+        if (item.id !== id) return item;
+      });
+      break;
+    default:
+      break;
+  }
+  localStorage.setItem(localStorageName, JSON.stringify(items));
+};
+
+const handleItemAction = (event, actionType) => {
+  const itemElement = event.currentTarget.parentElement.parentElement;
+  const itemId = itemElement.dataset.id;
+  const itemName =
+    event.currentTarget.parentElement.previousElementSibling.textContent;
+  switch (actionType) {
+    case 'delete':
+      groceryList.removeChild(itemElement);
+      if (!groceryList.children.length)
+        groceryContainer.classList.remove('show-container');
+      showAlert('success', `removed ${itemName} from the list`);
+      handleLocalStorageAction('remove', itemId);
+      setBackToDefault();
+      break;
+    case 'edit':
+      editElement = event.currentTarget.parentElement.previousElementSibling;
+      groceryInput.value = itemName;
+      editFlag = true;
+      editId = itemId;
+      submitBtn.textContent = 'update';
+      break;
+    default:
+      break;
+  }
+};
+
 const createListItem = (id, value) => {
   const groceryItem = document.createElement('article');
   const groceryItemId = document.createAttribute('data-id');
@@ -77,56 +127,9 @@ const clearItems = () => {
   localStorage.removeItem(localStorageName);
 };
 
-const handleLocalStorageAction = (actionType, id, value) => {
-  let items = getLocalStorage();
-  switch (actionType) {
-    case 'add':
-      items.push({ id, value });
-      break;
-    case 'edit':
-      items = items.map(item => {
-        if (item.id === id) item.value = value;
-        return item;
-      });
-      break;
-    case 'remove':
-      items = items.filter(item => {
-        if (item.id !== id) return item;
-      });
-      break;
-    default:
-      break;
-  }
-  localStorage.setItem(localStorageName, JSON.stringify(items));
-};
-
-const handleItemAction = (event, actionType) => {
-  const itemElement = event.currentTarget.parentElement.parentElement;
-  const itemId = itemElement.dataset.id;
-  const itemName =
-    event.currentTarget.parentElement.previousElementSibling.textContent;
-  switch (actionType) {
-    case 'delete':
-      groceryList.removeChild(itemElement);
-      if (!groceryList.children.length)
-        groceryContainer.classList.remove('show-container');
-      showAlert('success', `removed ${itemName} from the list`);
-      handleLocalStorageAction('remove', itemId);
-      setBackToDefault();
-      break;
-    case 'edit':
-      editElement = event.currentTarget.parentElement.previousElementSibling;
-      groceryInput.value = itemName;
-      editFlag = true;
-      editId = itemId;
-      submitBtn.textContent = 'update';
-    default:
-      break;
-  }
-};
-
 const addItem = event => {
   event.preventDefault();
+  // eslint-disable-next-line prefer-destructuring
   const value = groceryInput.value;
   const id = new Date().getTime().toString();
   if (value.trim() !== '') {

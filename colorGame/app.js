@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+/* eslint-disable no-loop-func */
 const squares = document.querySelectorAll('.square');
 const colorDisplay = document.getElementById('colorDisplay');
 const messageDisplay = document.getElementById('message');
@@ -10,22 +12,24 @@ let colors = [];
 let pickedColor;
 
 const changeColors = color =>
-  squares.forEach(square => (square.style.backgroundColor = color));
+  squares.forEach(square => {
+    square.style.backgroundColor = color;
+  });
 const pickColor = () => colors[Math.floor(Math.random() * colors.length)];
-
-const generateRandomColors = num => {
-  let arr = [];
-  for (var i = 0; i < num; i++) {
-    arr.push(randomColor());
-  }
-  return arr;
-};
 
 const randomColor = () => {
   const red = Math.floor(Math.random() * 256);
   const green = Math.floor(Math.random() * 256);
   const blue = Math.floor(Math.random() * 256);
   return `rgb(${red}, ${green}, ${blue})`;
+};
+
+const generateRandomColors = num => {
+  const arr = [];
+  for (let i = 0; i < num; i++) {
+    arr.push(randomColor());
+  }
+  return arr;
 };
 
 const reset = () => {
@@ -47,11 +51,20 @@ const reset = () => {
 
 const setModeButtons = () => {
   for (let i = 0; i < modeButtons.length; i++) {
-    modeButtons[i].addEventListener('click', function() {
+    modeButtons[i].addEventListener('click', function () {
       modeButtons[0].classList.remove('selected');
       modeButtons[1].classList.remove('selected');
       this.classList.add('selected');
-      this.textContent === 'Easy' ? (numSquares = 3) : (numSquares = 6);
+      switch (this.textContent) {
+        case 'Easy':
+          numSquares = 3;
+          break;
+        case 'Hard':
+          numSquares = 6;
+          break;
+        default:
+          break;
+      }
       reset();
     });
   }
@@ -59,8 +72,8 @@ const setModeButtons = () => {
 
 const setSquares = () => {
   for (let i = 0; i < squares.length; i++) {
-    squares[i].addEventListener('click', function() {
-      let clickedColor = this.style.backgroundColor;
+    squares[i].addEventListener('click', function () {
+      const clickedColor = this.style.backgroundColor;
       if (clickedColor === pickedColor) {
         messageDisplay.textContent = 'Correct!';
         resetButton.textContent = 'Play Again';

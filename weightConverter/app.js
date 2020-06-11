@@ -25,13 +25,13 @@ convertBtn.addEventListener('click', () => {
     showAlert('Please enter a value greater than zero');
   } else {
     gramsOutput.innerHTML = `<p class='mb-0'>${lb} ${
-      lb == 1 ? 'pound' : 'pounds'
+      lb === 1 ? 'pound' : 'pounds'
     } equals <span class='font-weight-bold'>${grams}</span> grams</p>`;
     kgOutput.innerHTML = `<p class='mb-0'>${lb} ${
-      lb == 1 ? 'pound' : 'pounds'
+      lb === 1 ? 'pound' : 'pounds'
     } equals <span class='font-weight-bold'>${kg}</span> kilograms</p>`;
     ozOutput.innerHTML = `<p class='mb-0'>${lb} ${
-      lb == 1 ? 'pound' : 'pounds'
+      lb === 1 ? 'pound' : 'pounds'
     } equals <span class='font-weight-bold'>${oz}</span> ounces</p>`;
   }
 });

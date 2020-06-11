@@ -41,7 +41,7 @@ clipboardBtn.addEventListener('click', () => {
     textArea.remove();
     showAlert('success', 'Password copied to clipboard!');
   } else {
-    return;
+    showAlert('error', 'There is no text to copy');
   }
 });
 
@@ -60,9 +60,9 @@ generate.addEventListener('click', () => {
 
   if (passwordLength >= 8 && passwordLength <= 20) {
     addToSelector(unicodeLower);
-    upper && addToSelector(unicodeUpper);
-    numbers && addToSelector(unicodeNumber);
-    symbols && addToSelector(unicodeSymbol);
+    if (upper) addToSelector(unicodeUpper);
+    if (numbers) addToSelector(unicodeNumber);
+    if (symbols) addToSelector(unicodeSymbol);
 
     for (let i = 0; i < passwordLength; i++)
       password.push(

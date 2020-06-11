@@ -2,7 +2,7 @@ const postsContainer = document.getElementById('posts-container');
 const loading = document.querySelector('.loader');
 const filter = document.getElementById('filter');
 
-let limit = 5;
+const limit = 5;
 let page = 1;
 
 const getPosts = async () => {
@@ -48,9 +48,11 @@ const filterPosts = event => {
   posts.forEach(post => {
     const title = post.querySelector('.post-title').innerText.toUpperCase();
     const body = post.querySelector('.post-body').innerText.toUpperCase();
-    title.indexOf(searchValue) > -1 || body.indexOf(searchValue) > -1
-      ? (post.style.display = 'flex')
-      : (post.style.display = 'none');
+    if (title.indexOf(searchValue) > -1 || body.indexOf(searchValue) > -1) {
+      post.style.display = 'flex';
+    } else {
+      post.style.display = 'none';
+    }
   });
 };
 

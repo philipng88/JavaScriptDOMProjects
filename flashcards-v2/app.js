@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 const cardsContainer = document.getElementById('cards-container');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
@@ -24,8 +25,9 @@ const setCardsData = cards => {
 };
 const cardsData = getCardsData();
 
-const updateCurrentText = () =>
-  (currentEl.innerText = `${currentActiveCard + 1}/${cardsEl.length}`);
+const updateCurrentText = () => {
+  currentEl.innerText = `${currentActiveCard + 1}/${cardsEl.length}`;
+};
 
 const createCard = (data, index) => {
   const card = document.createElement('div');
@@ -48,12 +50,17 @@ const createCard = (data, index) => {
 };
 
 const displayNavArrows = () => {
-  currentActiveCard <= 0
-    ? (prevBtn.style.visibility = 'hidden')
-    : (prevBtn.style.visibility = 'visible');
-  currentActiveCard >= cardsEl.length - 1
-    ? (nextBtn.style.visibility = 'hidden')
-    : (nextBtn.style.visibility = 'visible');
+  if (currentActiveCard <= 0) {
+    prevBtn.style.visibility = 'hidden';
+  } else {
+    prevBtn.style.visibility = 'visible';
+  }
+
+  if (currentActiveCard >= cardsEl.length - 1) {
+    nextBtn.style.visibility = 'hidden';
+  } else {
+    nextBtn.style.visibility = 'visible';
+  }
 };
 
 const updateCardsAndNavigation = (className, changeType) => {
@@ -73,10 +80,13 @@ const updateCardsAndNavigation = (className, changeType) => {
   displayNavArrows();
 };
 
-const toggleClearBtn = () =>
-  cardsData.length
-    ? (clearBtn.style.display = 'block')
-    : (clearBtn.style.display = 'none');
+const toggleClearBtn = () => {
+  if (cardsData.length) {
+    clearBtn.style.display = 'block';
+  } else {
+    clearBtn.style.display = 'none';
+  }
+};
 
 const createCards = () =>
   cardsData.forEach((data, index) => createCard(data, index));

@@ -56,7 +56,9 @@ const getSpecificFact = async event => {
     );
     await fetch(`http://numbersapi.com/${number}`)
       .then(response => response.text())
-      .then(data => (specificFactDisplay.innerText = data))
+      .then(data => {
+        specificFactDisplay.innerText = data;
+      })
       .catch(error => console.log(error));
     handleLoadingIndicators(
       false,
@@ -76,7 +78,9 @@ const getRandomFact = async () => {
   );
   await fetch('http://numbersapi.com/random/trivia')
     .then(response => response.text())
-    .then(data => (randomFactDisplay.innerText = data))
+    .then(data => {
+      randomFactDisplay.innerText = data;
+    })
     .catch(error => console.log(error));
   handleLoadingIndicators(
     false,

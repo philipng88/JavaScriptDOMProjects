@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 const draggableList = document.getElementById('draggable-list');
 const check = document.getElementById('check');
 
@@ -11,7 +12,7 @@ const movies = [
   'The Lion King (2019)',
   "Marvel's The Avengers",
   'Furious 7',
-  'Avengers: Age of Ultron'
+  'Avengers: Age of Ultron',
 ];
 
 const listItems = [];
@@ -80,18 +81,11 @@ const checkOrder = () => {
       listItem.classList.add('right');
     }
   });
-  numberWrong === 0
-    ? showAlert('All Correct!', 100)
-    : showAlert(
-        `${movies.length - numberWrong} / ${movies.length} correct`,
-        100
-      );
-};
-
-const showAlert = (message, timeout) => {
-  setTimeout(() => {
-    alert(message);
-  }, timeout);
+  if (numberWrong === 0) {
+    alert('All Correct!', 100);
+  } else {
+    alert(`${movies.length - numberWrong} / ${movies.length} correct`, 100);
+  }
 };
 
 const addEventListeners = () => {

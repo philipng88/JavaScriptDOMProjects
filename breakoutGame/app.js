@@ -15,7 +15,7 @@ const ball = {
   size: 10,
   speed: 4,
   dx: 4,
-  dy: -4
+  dy: -4,
 };
 
 const paddle = {
@@ -24,7 +24,7 @@ const paddle = {
   w: 80,
   h: 10,
   speed: 8,
-  dx: 0
+  dx: 0,
 };
 
 const brickInfo = {
@@ -33,7 +33,7 @@ const brickInfo = {
   padding: 10,
   offsetX: 45,
   offsetY: 60,
-  visible: true
+  visible: true,
 };
 
 const drawBall = () => {
@@ -80,7 +80,9 @@ const drawBricks = () => {
 
 const showAllBricks = () => {
   bricks.forEach(column => {
-    column.forEach(brick => (brick.visible = true));
+    column.forEach(brick => {
+      brick.visible = true;
+    });
   });
 };
 
@@ -142,6 +144,7 @@ const keyDown = event => {
     case 'Left':
     case 'ArrowLeft':
       paddle.dx = paddle.speed * -1;
+      break;
     default:
       break;
   }

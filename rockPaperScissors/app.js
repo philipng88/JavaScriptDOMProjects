@@ -1,5 +1,4 @@
 const choices = document.querySelectorAll('.choice');
-const score = document.getElementById('score');
 const result = document.getElementById('result');
 const restart = document.getElementById('restart');
 const modal = document.querySelector('.modal');
@@ -8,27 +7,29 @@ const computerScore = document.getElementById('computer-score');
 
 const scoreboard = {
   player: 0,
-  computer: 0
+  computer: 0,
 };
 
 const options = ['rock', 'paper', 'scissors'];
 
 const getWinner = (playerChoice, computerChoice) => {
+  let winner;
   if (playerChoice === computerChoice) {
-    return 'Neither';
+    winner = 'Neither';
   } else if (playerChoice === 'rock' && computerChoice === 'paper') {
-    return 'Computer';
+    winner = 'Computer';
   } else if (playerChoice === 'rock' && computerChoice === 'scissors') {
-    return 'Player';
+    winner = 'Player';
   } else if (playerChoice === 'paper' && computerChoice === 'rock') {
-    return 'Player';
+    winner = 'Player';
   } else if (playerChoice === 'paper' && computerChoice === 'scissors') {
-    return 'Computer';
+    winner = 'Computer';
   } else if (playerChoice === 'scissors' && computerChoice === 'rock') {
-    return 'Computer';
+    winner = 'Computer';
   } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
-    return 'Player';
+    winner = 'Player';
   }
+  return winner;
 };
 
 const showWinnerAndUpdateScore = (winner, computerChoice) => {
@@ -58,6 +59,8 @@ const showWinnerAndUpdateScore = (winner, computerChoice) => {
         <p class="computer-choice-display">computer chose <strong>${computerChoice}</strong></p>
       `;
       break;
+    default:
+      break;
   }
   modal.style.display = 'block';
 };
@@ -71,7 +74,7 @@ const play = event => {
 };
 
 const clearModal = event => {
-  if (event.target == modal) modal.style.display = 'none';
+  if (event.target === modal) modal.style.display = 'none';
 };
 
 const clearScoreboard = () => {

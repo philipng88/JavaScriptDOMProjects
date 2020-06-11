@@ -95,9 +95,8 @@ mealsEl.addEventListener('click', event => {
   const mealInfo = event.path.find(item => {
     if (item.classList) {
       return item.classList.contains('meal-info');
-    } else {
-      return false;
     }
+    return false;
   });
   if (mealInfo) {
     mealsEl.innerHTML = '';
@@ -107,4 +106,6 @@ mealsEl.addEventListener('click', event => {
   }
 });
 
-alertCloseBtn.addEventListener('click', () => (alert.style.display = 'none'));
+alertCloseBtn.addEventListener('click', () => {
+  alert.style.display = 'none';
+});

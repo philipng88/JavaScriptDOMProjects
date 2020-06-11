@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 const startModal = document.querySelector('.start-modal');
 const endgameModal = document.querySelector('.endgame-modal');
 const gameContainer = document.querySelector('.memory-game');
@@ -59,7 +60,7 @@ const checkPlayAgain = () => {
   endgameModal.addEventListener('click', event => {
     switch (event.target.id) {
       case 'yesButton':
-        location.reload();
+        window.location.reload();
         break;
       case 'noButton':
         endgameModal.classList.add('u-display-none');
@@ -119,9 +120,9 @@ const initializeGame = (frameworks, imageFolder) => {
   const cards = gameContainer.querySelectorAll('.memory-card');
 
   // shuffle cards
-  cards.forEach(
-    card => (card.style.order = Math.floor(Math.random() * numCards))
-  );
+  cards.forEach(card => {
+    card.style.order = Math.floor(Math.random() * numCards);
+  });
 
   cards.forEach(card => card.addEventListener('click', flipCard));
 };

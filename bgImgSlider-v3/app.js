@@ -7,14 +7,18 @@ const changeSlide = type => {
   currentSlide.classList.remove('current');
   switch (type) {
     case 'next':
-      currentSlide.nextElementSibling
-        ? currentSlide.nextElementSibling.classList.add('current')
-        : slides[0].classList.add('current');
+      if (currentSlide.nextElementSibling) {
+        currentSlide.nextElementSibling.classList.add('current');
+      } else {
+        slides[0].classList.add('current');
+      }
       break;
     case 'previous':
-      currentSlide.previousElementSibling
-        ? currentSlide.previousElementSibling.classList.add('current')
-        : slides[slides.length - 1].classList.add('current');
+      if (currentSlide.previousElementSibling) {
+        currentSlide.previousElementSibling.classList.add('current');
+      } else {
+        slides[slides.length - 1].classList.add('current');
+      }
       break;
     default:
       break;

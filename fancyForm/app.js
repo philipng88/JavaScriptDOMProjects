@@ -15,7 +15,6 @@ const prompts = [
 ];
 
 const shakeTime = 100;
-const switchTime = 200;
 
 let position = 0;
 
@@ -37,7 +36,7 @@ const getPrompt = () => {
   inputLabel.innerHTML = prompts[position].prompt;
   inputField.value = prompts[position].answer || '';
   inputField.focus();
-  progress.style.width = (position * 100) / prompts.length + '%';
+  progress.style.width = `${(position * 100) / prompts.length}%`;
   prevBtn.className = position ? 'fas fa-arrow-left' : 'fas fa-user';
   showPrompt();
 };
@@ -49,11 +48,11 @@ const setPreviousState = () => {
   }
 };
 
-const setTransform = (x, y) =>
-  (formBox.style.transform = `translate(${x}px, ${y}px)`);
+const setTransform = (x, y) => {
+  formBox.style.transform = `translate(${x}px, ${y}px)`;
+};
 
 const formComplete = () => {
-  // console.log(prompts);
   const h1 = document.createElement('h1');
   h1.classList.add('end');
   h1.appendChild(
@@ -63,7 +62,9 @@ const formComplete = () => {
   );
   setTimeout(() => {
     formBox.parentElement.appendChild(h1);
-    setTimeout(() => (h1.style.opacity = 1), 50);
+    setTimeout(() => {
+      h1.style.opacity = 1;
+    }, 50);
   }, 1000);
 };
 
@@ -101,5 +102,5 @@ document.addEventListener('DOMContentLoaded', getPrompt);
 prevBtn.addEventListener('click', setPreviousState);
 nextBtn.addEventListener('click', validate);
 inputField.addEventListener('keyup', event => {
-  if (event.keyCode == 13) validate();
+  if (event.keyCode === 13) validate();
 });

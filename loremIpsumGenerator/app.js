@@ -1,3 +1,4 @@
+// eslint-disable-next-line prefer-destructuring
 const LoremIpsum = require('lorem-ipsum').LoremIpsum;
 const copy = require('copy-text-to-clipboard');
 
