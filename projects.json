@@ -50,6 +50,7 @@
   { "directory": "speechTextReader", "title": "Speech Text Reader" },
   { "directory": "starRatings", "title": "Star Ratings" },
   { "directory": "stateCapitalLookup", "title": "State Capital Lookup" },
+  { "directory": "stopwatch", "title": "Stopwatch" },
   { "directory": "tabs", "title": "Tabs" },
   { "directory": "tipForm", "title": "Tip Form" },
   { "directory": "typingGame", "title": "Typing Game †" },

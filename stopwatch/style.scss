@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stopwatch {
+  width: 300px;
+  background-color: #00aaff;
+  border-radius: 5px;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.75), 0 0 1px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+
+  .controls {
+    display: flex;
+    button {
+      flex-grow: 1;
+      margin: 0 5px 4px;
+      padding: 5px 0;
+      border-radius: 5px;
+      box-shadow: 0 4px rgba(0, 0, 0, 0.75);
+      border: 0;
+      outline: 0;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      &:active {
+        margin-bottom: 0;
+        margin-top: 4px;
+        box-shadow: none;
+      }
+    }
+
+    .start {
+      background-color: #55dd55;
+      &:hover {
+        background-color: #66ee66;
+      }
+    }
+
+    .stop {
+      background-color: #dd5555;
+      &:hover {
+        background-color: #ee6666;
+      }
+    }
+
+    .reset {
+      background-color: #5555dd;
+      &:hover {
+        background-color: #6666ee;
+      }
+    }
+  }
+
+  .display {
+    font-size: 50px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    :not(:last-child):after {
+      content: ':';
+    }
+  }
+}
