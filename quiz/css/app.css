@@ -93,12 +93,6 @@ h3 {
   transition: transform 150ms;
 }
 
-.btn[disabled]:hover {
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
-}
-
 form {
   width: 100%;
   display: flex;
