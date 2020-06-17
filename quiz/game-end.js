@@ -31,18 +31,19 @@ const showAlert = message => {
 if (
   +mostRecentScore === 0 ||
   (highScores.length >= MAX_HIGH_SCORES && +mostRecentScore <= lowestHighScore)
-)
+) {
   highScoreForm.remove();
-
-highScoreForm.addEventListener('submit', event => {
-  event.preventDefault();
-  if (name.value.trim() !== '') {
-    if (!playersWithHighScore.includes(name.value.trim())) {
-      saveHighScore();
+} else {
+  highScoreForm.addEventListener('submit', event => {
+    event.preventDefault();
+    if (name.value.trim() !== '') {
+      if (!playersWithHighScore.includes(name.value.trim())) {
+        saveHighScore();
+      } else {
+        showAlert('Name is already in use');
+      }
     } else {
-      showAlert('Name is already in use');
+      showAlert('Please enter your name');
     }
-  } else {
-    showAlert('Please enter your name');
-  }
-});
+  });
+}
