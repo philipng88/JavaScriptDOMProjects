@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop Quiz</title>
+    <link rel="stylesheet" href="./css/app.css" />
+    <style>
+      .heading {
+        text-transform: capitalize;
+      }
+
+      .high-scores-list {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 4rem;
+      }
+
+      .high-score {
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex-center flex-column">
+        <h1 id="heading" class="heading">high scores</h1>
+        <ul id="highScoresList" class="high-scores-list"></ul>
+        <a href="./index.html" class="btn">Go Home</a>
+      </div>
+    </div>
+    <script src="./high-scores.js"></script>
+  </body>
+</html>

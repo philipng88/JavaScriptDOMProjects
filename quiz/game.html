@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop Quiz</title>
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./css/game.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="loader" class="loader"></div>
+      <div id="game" class="justify-center flex-column hidden">
+        <div id="hud" class="hud">
+          <div id="hud-item">
+            <p id="progressText" class="hud-prefix">Question</p>
+            <div class="progress-bar-wrapper">
+              <div id="progressBar" class="progress-bar"></div>
+            </div>
+          </div>
+          <div id="hud-item">
+            <p class="hud-prefix">Score</p>
+            <h1 id="score" class="hud-main-text">0</h1>
+          </div>
+        </div>
+        <h2 id="question"></h2>
+        <div class="choice-container" data-number="1">
+          <p class="choice-prefix">A</p>
+          <p class="choice-text"></p>
+        </div>
+        <div class="choice-container" data-number="2">
+          <p class="choice-prefix">B</p>
+          <p class="choice-text"></p>
+        </div>
+        <div class="choice-container" data-number="3">
+          <p class="choice-prefix">C</p>
+          <p class="choice-text"></p>
+        </div>
+        <div class="choice-container" data-number="4">
+          <p class="choice-prefix">D</p>
+          <p class="choice-text"></p>
+        </div>
+      </div>
+    </div>
+    <script src="./game.js"></script>
+  </body>
+</html>

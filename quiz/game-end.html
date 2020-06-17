@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop Quiz</title>
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex-center flex-column">
+        <h1>Your Score: <span id="finalScore"></span></h1>
+        <form id="highScoreForm">
+          <input type="text" id="name" placeholder="Enter your name" />
+          <button type="submit" class="btn" id="saveScoreBtn" disabled>
+            Save High Score
+          </button>
+        </form>
+        <a href="./game.html" class="btn">Play Again</a>
+        <a href="./index.html" class="btn">Go Home</a>
+      </div>
+    </div>
+    <script src="./game-end.js"></script>
+  </body>
+</html>
