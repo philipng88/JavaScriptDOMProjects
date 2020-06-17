@@ -1,4 +1,4 @@
-const question = document.getElementById('question');
+const questionText = document.getElementById('question');
 const choices = Array.from(document.querySelectorAll('.choice-container'));
 const progressText = document.getElementById('progressText');
 const progressBar = document.getElementById('progressBar');
@@ -13,9 +13,9 @@ let questionCounter = 0;
 let availableQuestions = [];
 let questions = [];
 
-const CORRECT_BONUS = 10;
+const CORRECT_BONUS = { easy: 5, medium: 10, hard: 15 };
 const MAX_QUESTIONS = 10;
-const API_URL = `https://opentdb.com/api.php?amount=${MAX_QUESTIONS}&category=9&difficulty=easy&type=multiple`;
+const API_URL = `https://opentdb.com/api.php?amount=${MAX_QUESTIONS}&category=9&type=multiple`;
 
 const endGame = () => {
   localStorage.setItem('mostRecentScore', score);
@@ -32,7 +32,7 @@ const getNewQuestion = () => {
   progressBar.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
-  question.innerHTML = currentQuestion.question;
+  questionText.innerHTML = currentQuestion.question;
   choices.forEach(choice => {
     const choiceNumber = choice.dataset.number;
     const choiceText = choice.children[1];
@@ -55,16 +55,16 @@ fetch(API_URL)
   .then(res => res.json())
   .then(data => {
     questions = data.results.map(item => {
-      const formattedQuestion = {
-        question: item.question,
-      };
-      const answerChoices = [...item.incorrect_answers];
+      const {
+        question,
+        difficulty,
+        incorrect_answers: incorrectAnswers,
+        correct_answer: correctAnswer,
+      } = item;
+      const formattedQuestion = { question, difficulty };
+      const answerChoices = [...incorrectAnswers];
       formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
-      answerChoices.splice(
-        formattedQuestion.answer - 1,
-        0,
-        item.correct_answer
-      );
+      answerChoices.splice(formattedQuestion.answer - 1, 0, correctAnswer);
       answerChoices.forEach((choice, index) => {
         formattedQuestion[`choice${index + 1}`] = choice;
       });
@@ -85,7 +85,21 @@ choices.forEach(choice => {
     acceptingAnswers = false;
     const selectedAnswer = +event.currentTarget.dataset.number;
     const answerIsCorrect = selectedAnswer === currentQuestion.answer;
-    if (answerIsCorrect) incrementScore(CORRECT_BONUS);
+    if (answerIsCorrect) {
+      switch (currentQuestion.difficulty) {
+        case 'easy':
+          incrementScore(CORRECT_BONUS.easy);
+          break;
+        case 'medium':
+          incrementScore(CORRECT_BONUS.medium);
+          break;
+        case 'hard':
+          incrementScore(CORRECT_BONUS.hard);
+          break;
+        default:
+          break;
+      }
+    }
     const choiceText = choice.children[1];
     choiceText.classList.add(answerIsCorrect ? 'correct' : 'incorrect');
     setTimeout(() => {
