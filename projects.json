@@ -46,6 +46,7 @@
   { "directory": "patatapClone", "title": "Patatap Clone" },
   { "directory": "pokedex", "title": "Pokedex *" },
   { "directory": "quiz", "title": "Quiz *"},
+  { "directory": "randomUser", "title": "Random User *" },
   { "directory": "rockPaperScissors", "title": "Rock Paper Scissors Game" },
   { "directory": "sortableList", "title": "Sortable List" },
   { "directory": "speechTextReader", "title": "Speech Text Reader" },
