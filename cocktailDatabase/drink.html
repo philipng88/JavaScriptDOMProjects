@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Cocktail</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@blaze/css@9.2.0/dist/blaze/blaze.css"
+    />
+    <link rel="stylesheet" href="./css/shared.css" />
+    <link rel="stylesheet" href="./css/drink.css" />
+  </head>
+  <body>
+    <section class="loading" id="loading">
+      <img src="./loading.gif" alt="loading icon" />
+    </section>
+    <section class="single-drink">
+      <img
+        src="https://via.placeholder.com/500"
+        class="drink-img"
+        id="drinkImg"
+        alt="drink"
+      />
+      <article class="drink-info">
+        <h2 class="drink-name" id="drinkName"></h2>
+        <p class="drink-desc" id="drinkDesc"></p>
+        <ul class="c-list" id="drinkIngredients"></ul>
+        <a href="./index.html" class="btn">go back</a>
+      </article>
+    </section>
+    <script type="module" src="./singleDrink.js"></script>
+  </body>
+</html>

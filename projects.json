@@ -9,6 +9,7 @@
   { "directory": "budgetCalculator-v2", "title": "Budget Calculator (alternate)"},
   { "directory": "calculator", "title": "Calculator" },
   { "directory": "classicToDoList", "title": "Classic To-do List" },
+  { "directory": "cocktailDatabase", "title": "Cocktail Database"},
   { "directory": "CoffeeShop", "title": "Coffee Shop" },
   { "directory": "colorGame", "title": "Color Game" },
   { "directory": "countdownTimer", "title": "Countdown Timer" },

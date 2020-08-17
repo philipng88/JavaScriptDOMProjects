@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocktail Database</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@blaze/css@9.2.0/dist/blaze/blaze.css"
+    />
+    <link rel="stylesheet" href="./css/shared.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+  </head>
+  <body>
+    <form class="search-form" id="searchForm">
+      <h2>cocktail database</h2>
+      <div class="c-input-group">
+        <div class="o-field">
+          <input
+            class="c-field"
+            id="searchInput"
+            type="search"
+            placeholder="Search Cocktails..."
+          />
+        </div>
+        <button class="c-button c-button--brand" type="submit">Search</button>
+      </div>
+    </form>
+    <section class="section cocktails">
+      <article class="loading" id="loading">
+        <img src="./loading.gif" alt="loading icon" />
+      </article>
+      <h2 class="title" id="title"></h2>
+      <div class="section-center"></div>
+    </section>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
